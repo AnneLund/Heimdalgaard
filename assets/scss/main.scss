@@ -126,6 +126,8 @@ $desktop: 1024px;
   }
 }
 
+//MAIN-HEADER
+
 .main-header {
   position: relative;
   display: flex;
@@ -161,6 +163,8 @@ $desktop: 1024px;
       opacity: 1;
     }
   }
+
+  //LOGO OG TITEL
 
   .logo-container {
     position: absolute;
@@ -254,15 +258,11 @@ $desktop: 1024px;
   }
 }
 
+//FREMTIDENS BÆREDYGTIGE LANDBRUG
+
 .future {
   grid-area: b;
   text-align: center;
-
-  .header {
-  }
-
-  @media screen and (max-width: $mobile) {
-  }
 
   @media screen and (max-width: $tablet) {
     .header {
@@ -279,34 +279,34 @@ $desktop: 1024px;
     font-family: "Open Sans", sans-serif;
 
     img {
-      width: 100%;
-      padding: 0 40px;
+      width: 50%;
     }
 
-    @media screen and (max-width: $mobile) {
-      img {
-        margin: 20px 0;
-      }
-    }
+    // @media screen and (max-width: $mobile) {
+    //   img {
+    //     margin: 20px 0;
+    //   }
+    // }
 
     figcaption {
       margin-top: 20px;
-      padding: 0 60px;
+      padding: 0 40px;
       display: flex;
       justify-content: center;
       div {
-        width: 30%;
+        width: 500px;
         padding: 0 40px;
+        margin: 10px;
         p {
           font-size: 15px;
         }
       }
 
-      @media screen and (max-width: $tablet) {
-        div {
-          width: 50%;
-        }
-      }
+      // @media screen and (max-width: $tablet) {
+      //   div {
+      //     width: 50%;
+      //   }
+      // }
 
       @media screen and (max-width: $mobile) {
         div {
@@ -339,8 +339,27 @@ $desktop: 1024px;
   }
 }
 
-.vision {
+.recycle {
   grid-area: c;
+  .figures {
+    display: flex;
+    justify-content: center;
+
+    figure {
+      width: 200px;
+      margin: 0 10px;
+      figcaption {
+        h4 {
+          font-size: 20px;
+          margin: 10px 0;
+        }
+        p {
+          font-size: 10px;
+          text-align: justify;
+        }
+      }
+    }
+  }
 }
 
 .item4 {
