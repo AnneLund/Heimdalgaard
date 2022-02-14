@@ -37,7 +37,7 @@
   .grid-container {
     display: grid;
     grid-template-columns: auto auto;
-    grid-template-areas: "a a" "b c" "d e" "f g" "h i" "j j" "k k";
+    grid-template-areas: "a a" "b b" "c c" "d e" "f g" "h i" "j j" "k k";
   }
 }
 @media screen and (max-width: 380px) {
@@ -151,14 +151,25 @@
   -webkit-animation-fill-mode: forwards;
           animation-fill-mode: forwards;
 }
+@media screen and (max-width: 380px) {
+  .main-header .logo-container .quote #words {
+    font-size: 5vw;
+    margin: 0 20px;
+  }
+}
+@media screen and (max-width: 380px) {
+  .main-header .logo-container {
+    padding: 0 20px;
+  }
+}
 
 @media screen and (max-width: 380px) {
-  header {
+  .main-header {
     height: 65vh;
   }
 }
 @media screen and (max-width: 786px) {
-  header {
+  .main-header {
     height: 60vh;
   }
 }
@@ -167,14 +178,28 @@
   text-align: center;
 }
 .future .header {
-  height: 15vh;
+  height: 20vh;
 }
 @media screen and (max-width: 380px) {
   .future .header {
-    height: 20vh;
+    height: 15vh;
   }
   .future .header h2 {
-    font-size: 25px;
+    font-size: 6vw;
+  }
+  .future .header h3 {
+    font-size: 5vw;
+  }
+}
+@media screen and (max-width: 786px) {
+  .future .header {
+    height: 16vh;
+  }
+  .future .header h2 {
+    font-size: 3.5vw;
+  }
+  .future .header h3 {
+    font-size: 3vw;
   }
 }
 .future figure {
@@ -182,6 +207,7 @@
 }
 .future figure img {
   width: 50%;
+  margin-bottom: 20px;
 }
 @media screen and (max-width: 380px) {
   .future figure img {

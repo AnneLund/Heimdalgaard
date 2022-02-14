@@ -57,7 +57,8 @@ $desktop: 1024px;
     grid-template-columns: auto auto;
     grid-template-areas:
       "a a"
-      "b c"
+      "b b"
+      "c c"
       "d e"
       "f g"
       "h i"
@@ -184,18 +185,31 @@ $desktop: 1024px;
           animation-fill-mode: forwards;
         }
       }
+
+      @media screen and (max-width: $mobile) {
+        #words {
+          font-size: 5vw;
+          margin: 0 20px;
+        }
+      }
+    }
+  }
+
+  @media screen and (max-width: $mobile) {
+    .logo-container {
+      padding: 0 20px;
     }
   }
 }
 
 @media screen and (max-width: $mobile) {
-  header {
+  .main-header {
     height: 65vh;
   }
 }
 
 @media screen and (max-width: $tablet) {
-  header {
+  .main-header {
     height: 60vh;
   }
 }
@@ -205,14 +219,29 @@ $desktop: 1024px;
   text-align: center;
 
   .header {
-    height: 15vh;
+    height: 20vh;
   }
 
   @media screen and (max-width: $mobile) {
     .header {
-      height: 20vh;
+      height: 15vh;
       h2 {
-        font-size: 25px;
+        font-size: 6vw;
+      }
+      h3 {
+        font-size: 5vw;
+      }
+    }
+  }
+
+  @media screen and (max-width: $tablet) {
+    .header {
+      height: 16vh;
+      h2 {
+        font-size: 3.5vw;
+      }
+      h3 {
+        font-size: 3vw;
       }
     }
   }
@@ -222,6 +251,7 @@ $desktop: 1024px;
 
     img {
       width: 50%;
+      margin-bottom: 20px;
     }
 
     @media screen and (max-width: $mobile) {
