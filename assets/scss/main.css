@@ -16,17 +16,20 @@
 .grid-container img {
   width: 100%;
 }
-.grid-container article {
+.grid-container article,
+.grid-container .recycle {
   font-family: "Open Sans", sans-serif;
   text-align: center;
   padding: 20px 0;
   font-size: 30px;
 }
-.grid-container article h2 {
+.grid-container article h2,
+.grid-container .recycle h2 {
   margin: 30px 0;
   font-size: 35px;
 }
-.grid-container article h3 {
+.grid-container article h3,
+.grid-container .recycle h3 {
   font-weight: 100;
   margin-top: -25px;
   margin-bottom: 40px;
@@ -262,35 +265,6 @@
 .recycle {
   grid-area: c;
 }
-.recycle .figures {
-  display: flex;
-  justify-content: center;
-  width: 50%;
-  margin: auto;
-}
-.recycle .figures figure {
-  margin: 10px;
-}
-.recycle .figures figure figcaption h4 {
-  font-size: 20px;
-  margin: 10px 0;
-}
-.recycle .figures figure figcaption p {
-  font-size: 10px;
-  text-align: start;
-}
-@media screen and (max-width: 786px) {
-  .recycle .figures {
-    display: flex;
-    flex-direction: column;
-  }
-}
-@media screen and (max-width: 380px) {
-  .recycle .figures {
-    display: flex;
-    flex-direction: column;
-  }
-}
 
 .item4 {
   grid-area: d;
@@ -306,6 +280,33 @@
 
 .item7 {
   grid-area: g;
+}
+
+.item4,
+.item5,
+.item6,
+.item7 {
+  text-align: center;
+}
+.item4 figure figcaption,
+.item5 figure figcaption,
+.item6 figure figcaption,
+.item7 figure figcaption {
+  text-align: center;
+}
+.item4 figure figcaption h4,
+.item5 figure figcaption h4,
+.item6 figure figcaption h4,
+.item7 figure figcaption h4 {
+  font-size: 25px;
+  margin: 10px 0;
+}
+.item4 figure figcaption p,
+.item5 figure figcaption p,
+.item6 figure figcaption p,
+.item7 figure figcaption p {
+  font-size: 15px;
+  text-align: start;
 }
 
 .item8 {

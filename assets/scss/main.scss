@@ -31,7 +31,8 @@ $desktop: 1024px;
     width: 100%;
   }
 
-  article {
+  article,
+  .recycle {
     font-family: "Open Sans", sans-serif;
     text-align: center;
     padding: 20px 0;
@@ -339,43 +340,25 @@ $desktop: 1024px;
   }
 }
 
+//BÆREDYGTIGHED OG OMTANKE
+
 .recycle {
   grid-area: c;
-  .figures {
-    display: flex;
-    justify-content: center;
-    width: 50%;
-    margin: auto;
-
-    figure {
-      margin: 10px;
-
-      figcaption {
-        h4 {
-          font-size: 20px;
-          margin: 10px 0;
-        }
-        p {
-          font-size: 10px;
-          text-align: start;
-        }
-      }
-    }
-  }
-  @media screen and (max-width: $tablet) {
-    .figures {
-      display: flex;
-      flex-direction: column;
-    }
-  }
-
-  @media screen and (max-width: $mobile) {
-    .figures {
-      display: flex;
-      flex-direction: column;
-    }
-  }
 }
+
+// @media screen and (max-width: $tablet) {
+//   .figures {
+//     display: flex;
+//     flex-direction: column;
+//   }
+// }
+
+// @media screen and (max-width: $mobile) {
+//   .figures {
+//     display: flex;
+//     flex-direction: column;
+//   }
+// }
 
 .item4 {
   grid-area: d;
@@ -388,6 +371,26 @@ $desktop: 1024px;
 }
 .item7 {
   grid-area: g;
+}
+
+.item4,
+.item5,
+.item6,
+.item7 {
+  text-align: center;
+  figure {
+    figcaption {
+      text-align: center;
+      h4 {
+        font-size: 25px;
+        margin: 10px 0;
+      }
+      p {
+        font-size: 15px;
+        text-align: start;
+      }
+    }
+  }
 }
 .item8 {
   grid-area: h;
