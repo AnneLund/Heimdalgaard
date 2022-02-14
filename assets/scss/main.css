@@ -205,19 +205,7 @@
   grid-area: b;
   text-align: center;
 }
-.future .header {
-  height: 20vh;
-  margin-bottom: 20px;
-}
-@media screen and (max-width: 380px) {
-  .future .header {
-    height: 15vh;
-  }
-}
 @media screen and (max-width: 786px) {
-  .future .header {
-    height: 16vh;
-  }
   .future .header h2 {
     font-size: 3.5vw;
   }
@@ -229,12 +217,11 @@
   font-family: "Open Sans", sans-serif;
 }
 .future figure img {
-  width: 50%;
-  margin-bottom: 30px;
+  width: 100%;
+  padding: 0 40px;
 }
 @media screen and (max-width: 380px) {
   .future figure img {
-    width: 70%;
     margin: 20px 0;
   }
 }
