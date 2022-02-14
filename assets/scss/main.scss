@@ -49,6 +49,26 @@ $desktop: 1024px;
       font-size: 25px;
     }
   }
+
+  @media screen and (max-width: $mobile) {
+    article {
+      h2 {
+        font-size: 6vw;
+      }
+      h3 {
+        font-size: 5vw;
+      }
+
+      .header {
+        h2 {
+          font-size: 6vw;
+        }
+        h3 {
+          font-size: 5vw;
+        }
+      }
+    }
+  }
 }
 
 @media screen and (max-width: $tablet) {
@@ -225,12 +245,6 @@ $desktop: 1024px;
   @media screen and (max-width: $mobile) {
     .header {
       height: 15vh;
-      h2 {
-        font-size: 6vw;
-      }
-      h3 {
-        font-size: 5vw;
-      }
     }
   }
 
@@ -282,6 +296,9 @@ $desktop: 1024px;
       @media screen and (max-width: $mobile) {
         div {
           width: 100%;
+          h4 {
+            font-size: 17px;
+          }
           padding: 5px;
         }
       }
