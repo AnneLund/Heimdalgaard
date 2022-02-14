@@ -1,0 +1,228 @@
+#circle1 {
+  animation: grow1 4s infinite alternate;
+  transform-box: fill-box;
+  transform-origin: center;
+}
+
+@keyframes grow1 {
+  from {
+    transform: scale(0.5);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+
+#circle2 {
+  animation: grow2 3s infinite alternate;
+  transform-box: fill-box;
+  transform-origin: center;
+}
+
+@keyframes grow2 {
+  from {
+    transform: scale(0.5);
+  }
+  to {
+    transform: scale(0.7);
+  }
+}
+
+#circle3 {
+  animation: grow3 2s infinite alternate;
+  transform-box: fill-box;
+  transform-origin: center;
+}
+
+@keyframes grow3 {
+  from {
+    transform: scale(0.1);
+  }
+  to {
+    transform: scale(0.5);
+  }
+}
+
+#circle4 {
+  animation: grow4 5s infinite alternate;
+  transform-box: fill-box;
+  transform-origin: center;
+}
+
+@keyframes grow4 {
+  from {
+    transform: scale(1.3);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+
+#circle5 {
+  animation: grow5 4s infinite alternate;
+  transform-box: fill-box;
+  transform-origin: center;
+}
+
+@keyframes grow5 {
+  from {
+    transform: scale(0.1);
+  }
+  to {
+    transform: scale(0.5);
+  }
+}
+
+#circle6 {
+  animation: grow6 4s infinite alternate;
+  transform-box: fill-box;
+  transform-origin: center;
+}
+
+@keyframes grow6 {
+  from {
+    transform: scale(0.1);
+  }
+  to {
+    transform: scale(0.7);
+  }
+}
+
+#circle7 {
+  animation: grow7 3s infinite alternate;
+  transform-box: fill-box;
+  transform-origin: center;
+}
+
+@keyframes grow7 {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(0.5);
+  }
+}
+
+#circle8 {
+  animation: grow8 5s infinite alternate;
+  transform-box: fill-box;
+  transform-origin: center;
+}
+
+@keyframes grow8 {
+  from {
+    transform: scale(0.5);
+  }
+  to {
+    transform: scale(0.1);
+  }
+}
+
+#circle9 {
+  animation: grow9 6s infinite alternate;
+  transform-box: fill-box;
+  transform-origin: center;
+}
+
+@keyframes grow9 {
+  from {
+    transform: scale(0.8);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+
+#circle10 {
+  animation: grow10 2s infinite alternate;
+  transform-box: fill-box;
+  transform-origin: center;
+}
+
+@keyframes grow10 {
+  from {
+    transform: scale(0.3);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+
+@keyframes showup {
+  0% {
+    opacity: 0;
+  }
+
+  5% {
+    opacity: 0;
+  }
+
+  10% {
+    opacity: 1;
+  }
+
+  15% {
+    opacity: 1;
+  }
+
+  20% {
+    opacity: 1;
+  }
+  80% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes slidein1 {
+  0% {
+    margin-left: -2000px;
+  }
+
+  100% {
+    margin-left: -170px;
+  }
+}
+
+@keyframes slidein2 {
+  0% {
+    margin-left: -2000px;
+  }
+
+  100% {
+    margin-left: -75px;
+  }
+}
+
+@keyframes slidein3 {
+  0% {
+    margin-left: -2000px;
+  }
+
+  100% {
+    margin-left: 50px;
+  }
+}
+
+// @keyframes reveal {
+//   0% {
+//     opacity: 0;
+//     width: 0px;
+//   }
+//   20% {
+//     opacity: 1;
+//     width: 0px;
+//   }
+//   30% {
+//     width: 355px;
+//   }
+//   80% {
+//     opacity: 1;
+//   }
+//   100% {
+//     opacity: 0;
+//     width: 200px;
+//   }
+// }
