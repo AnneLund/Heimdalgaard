@@ -217,7 +217,7 @@
   font-family: "Open Sans", sans-serif;
 }
 .future figure img {
-  width: 50%;
+  width: 80%;
 }
 .future figure figcaption {
   margin-top: 20px;
@@ -265,10 +265,11 @@
 .recycle .figures {
   display: flex;
   justify-content: center;
+  width: 50%;
+  margin: auto;
 }
 .recycle .figures figure {
-  width: 200px;
-  margin: 0 10px;
+  margin: 10px;
 }
 .recycle .figures figure figcaption h4 {
   font-size: 20px;
@@ -276,7 +277,19 @@
 }
 .recycle .figures figure figcaption p {
   font-size: 10px;
-  text-align: justify;
+  text-align: start;
+}
+@media screen and (max-width: 786px) {
+  .recycle .figures {
+    display: flex;
+    flex-direction: column;
+  }
+}
+@media screen and (max-width: 380px) {
+  .recycle .figures {
+    display: flex;
+    flex-direction: column;
+  }
 }
 
 .item4 {

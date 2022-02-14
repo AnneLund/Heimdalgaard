@@ -279,7 +279,7 @@ $desktop: 1024px;
     font-family: "Open Sans", sans-serif;
 
     img {
-      width: 50%;
+      width: 80%;
     }
 
     // @media screen and (max-width: $mobile) {
@@ -344,10 +344,12 @@ $desktop: 1024px;
   .figures {
     display: flex;
     justify-content: center;
+    width: 50%;
+    margin: auto;
 
     figure {
-      width: 200px;
-      margin: 0 10px;
+      margin: 10px;
+
       figcaption {
         h4 {
           font-size: 20px;
@@ -355,9 +357,22 @@ $desktop: 1024px;
         }
         p {
           font-size: 10px;
-          text-align: justify;
+          text-align: start;
         }
       }
+    }
+  }
+  @media screen and (max-width: $tablet) {
+    .figures {
+      display: flex;
+      flex-direction: column;
+    }
+  }
+
+  @media screen and (max-width: $mobile) {
+    .figures {
+      display: flex;
+      flex-direction: column;
     }
   }
 }
