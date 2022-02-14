@@ -46,6 +46,20 @@
     font-size: 5vw;
   }
 }
+@media screen and (max-width: 786px) {
+  .grid-container article h2 {
+    font-size: 5vw;
+  }
+  .grid-container article h3 {
+    font-size: 3vw;
+  }
+  .grid-container article .header h2 {
+    font-size: 5vw;
+  }
+  .grid-container article .header h3 {
+    font-size: 3vw;
+  }
+}
 
 @media screen and (max-width: 786px) {
   .grid-container {
@@ -216,11 +230,12 @@
 }
 .future figure img {
   width: 50%;
-  margin-bottom: 20px;
+  margin-bottom: 30px;
 }
 @media screen and (max-width: 380px) {
   .future figure img {
     width: 70%;
+    margin: 20px 0;
   }
 }
 .future figure figcaption {
