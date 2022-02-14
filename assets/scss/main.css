@@ -52,7 +52,7 @@
   display: flex;
   justify-content: center;
   grid-area: a;
-  background-image: url(/assets/img/background.jpeg);
+  background-image: url(../img/background.jpeg);
   background-color: #e7e7e74b;
   background-blend-mode: hue;
   background-size: cover;
