@@ -26,8 +26,8 @@ body {
     "b b b b"
     "c c c c"
     "d d d d"
-    "e f g h"
-    "i j k k";
+    "e f g g"
+    "h i j k";
 
   grid-gap: 10px;
 
@@ -39,19 +39,19 @@ body {
   .recycle {
     font-family: "Open Sans", sans-serif;
     text-align: center;
-    padding: 20px 0;
+
     font-size: 30px;
 
     h2 {
       margin: 30px 0;
-      font-size: 35px;
+      font-size: 25px;
     }
 
     h3 {
       font-weight: 100;
       margin-top: -25px;
-      margin-bottom: 40px;
-      font-size: 25px;
+      margin-bottom: 20px;
+      font-size: 20px;
     }
   }
 
@@ -300,8 +300,8 @@ body {
       display: flex;
       justify-content: center;
       div {
-        width: 500px;
-        padding: 0 40px;
+        width: 40vw;
+        padding: 0 60px;
         margin: 10px;
         p {
           font-size: 15px;
@@ -369,16 +369,23 @@ body {
   font-family: "Open Sans", sans-serif;
   grid-area: d;
   display: grid;
-  grid-template-columns: 200px 200px 200px 200px;
+  grid-template-columns: 13vw 13vw 13vw 13vw;
   grid-gap: 10px;
   margin: auto;
   figure {
     figcaption {
       padding: 0 5px;
       h4 {
-        margin: 5px;
+        margin: 10px;
         font-size: 20px;
         text-align: center;
+      }
+      @media screen and (max-width: $tablet) {
+        h4 {
+          margin: 5px;
+          font-size: 15px;
+          text-align: center;
+        }
       }
       p {
         font-size: 12px;
@@ -391,15 +398,14 @@ body {
 @media screen and (max-width: $tablet) {
   .recycle-items {
     display: grid;
-    grid-template-columns: 200px 200px;
-    margin: auto;
+    grid-template-columns: 40vw 40vw;
   }
 }
 
 @media screen and (max-width: $mobile) {
   .recycle-items {
     display: grid;
-    grid-template-columns: 200px;
+    grid-template-columns: 60vw;
   }
 }
 .item5 {
