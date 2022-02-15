@@ -271,7 +271,7 @@ body {
 
 @media screen and (max-width: 380px) {
   .recycle h2 {
-    font-size: 6vw;
+    font-size: 5vw;
   }
   .recycle h3 {
     font-size: 5vw;
