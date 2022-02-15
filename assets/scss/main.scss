@@ -14,6 +14,10 @@ $mobile: 380px;
 $tablet: 786px;
 $desktop: 1024px;
 
+body {
+  max-width: 1920px;
+}
+
 .grid-container {
   display: grid;
   grid-template-columns: auto auto auto auto;
@@ -21,9 +25,9 @@ $desktop: 1024px;
     "a a a a"
     "b b b b"
     "c c c c"
-    "d e f g"
-    "h i j j"
-    "k k k k";
+    "d d d d"
+    "e f g h"
+    "i j k k";
 
   grid-gap: 10px;
 
@@ -100,7 +104,8 @@ $desktop: 1024px;
       "a a"
       "b b"
       "c c"
-      "d e"
+      "d d"
+      "e e"
       "f g"
       "h i"
       "j j"
@@ -280,7 +285,7 @@ $desktop: 1024px;
     font-family: "Open Sans", sans-serif;
 
     img {
-      width: 80%;
+      width: 50%;
     }
 
     // @media screen and (max-width: $mobile) {
@@ -360,8 +365,42 @@ $desktop: 1024px;
 //   }
 // }
 
-.item4 {
+.recycle-items {
+  font-family: "Open Sans", sans-serif;
   grid-area: d;
+  display: grid;
+  grid-template-columns: 200px 200px 200px 200px;
+  grid-gap: 10px;
+  margin: auto;
+  figure {
+    figcaption {
+      padding: 0 5px;
+      h4 {
+        margin: 5px;
+        font-size: 20px;
+        text-align: center;
+      }
+      p {
+        font-size: 12px;
+        text-align: start;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: $tablet) {
+  .recycle-items {
+    display: grid;
+    grid-template-columns: 200px 200px;
+    margin: auto;
+  }
+}
+
+@media screen and (max-width: $mobile) {
+  .recycle-items {
+    display: grid;
+    grid-template-columns: 200px;
+  }
 }
 .item5 {
   grid-area: e;
@@ -371,26 +410,6 @@ $desktop: 1024px;
 }
 .item7 {
   grid-area: g;
-}
-
-.item4,
-.item5,
-.item6,
-.item7 {
-  text-align: center;
-  figure {
-    figcaption {
-      text-align: center;
-      h4 {
-        font-size: 25px;
-        margin: 10px 0;
-      }
-      p {
-        font-size: 15px;
-        text-align: start;
-      }
-    }
-  }
 }
 .item8 {
   grid-area: h;

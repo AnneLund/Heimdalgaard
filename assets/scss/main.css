@@ -7,10 +7,14 @@
   box-sizing: border-box;
 }
 
+body {
+  max-width: 1920px;
+}
+
 .grid-container {
   display: grid;
   grid-template-columns: auto auto auto auto;
-  grid-template-areas: "a a a a" "b b b b" "c c c c" "d e f g" "h i j j" "k k k k";
+  grid-template-areas: "a a a a" "b b b b" "c c c c" "d d d d" "e f g h" "i j k k";
   grid-gap: 10px;
 }
 .grid-container img {
@@ -68,7 +72,7 @@
   .grid-container {
     display: grid;
     grid-template-columns: auto auto;
-    grid-template-areas: "a a" "b b" "c c" "d e" "f g" "h i" "j j" "k k";
+    grid-template-areas: "a a" "b b" "c c" "d d" "e e" "f g" "h i" "j j" "k k";
   }
 }
 @media screen and (max-width: 380px) {
@@ -220,7 +224,7 @@
   font-family: "Open Sans", sans-serif;
 }
 .future figure img {
-  width: 80%;
+  width: 50%;
 }
 .future figure figcaption {
   margin-top: 20px;
@@ -266,10 +270,40 @@
   grid-area: c;
 }
 
-.item4 {
+.recycle-items {
+  font-family: "Open Sans", sans-serif;
   grid-area: d;
+  display: grid;
+  grid-template-columns: 200px 200px 200px 200px;
+  grid-gap: 10px;
+  margin: auto;
+}
+.recycle-items figure figcaption {
+  padding: 0 5px;
+}
+.recycle-items figure figcaption h4 {
+  margin: 5px;
+  font-size: 20px;
+  text-align: center;
+}
+.recycle-items figure figcaption p {
+  font-size: 12px;
+  text-align: start;
 }
 
+@media screen and (max-width: 786px) {
+  .recycle-items {
+    display: grid;
+    grid-template-columns: 200px 200px;
+    margin: auto;
+  }
+}
+@media screen and (max-width: 380px) {
+  .recycle-items {
+    display: grid;
+    grid-template-columns: 200px;
+  }
+}
 .item5 {
   grid-area: e;
 }
@@ -280,33 +314,6 @@
 
 .item7 {
   grid-area: g;
-}
-
-.item4,
-.item5,
-.item6,
-.item7 {
-  text-align: center;
-}
-.item4 figure figcaption,
-.item5 figure figcaption,
-.item6 figure figcaption,
-.item7 figure figcaption {
-  text-align: center;
-}
-.item4 figure figcaption h4,
-.item5 figure figcaption h4,
-.item6 figure figcaption h4,
-.item7 figure figcaption h4 {
-  font-size: 25px;
-  margin: 10px 0;
-}
-.item4 figure figcaption p,
-.item5 figure figcaption p,
-.item6 figure figcaption p,
-.item7 figure figcaption p {
-  font-size: 15px;
-  text-align: start;
 }
 
 .item8 {
