@@ -20,31 +20,22 @@ body {
 .grid-container img {
   width: 100%;
 }
-.grid-container article,
-.grid-container .recycle {
+.grid-container article {
   font-family: "Open Sans", sans-serif;
   text-align: center;
   font-size: 30px;
 }
-.grid-container article h2,
-.grid-container .recycle h2 {
+.grid-container article h2 {
   margin: 30px 0;
-  font-size: 25px;
+  font-size: 40px;
 }
-.grid-container article h3,
-.grid-container .recycle h3 {
+.grid-container article h3 {
   font-weight: 100;
   margin-top: -25px;
   margin-bottom: 20px;
   font-size: 20px;
 }
 @media screen and (max-width: 380px) {
-  .grid-container article h2 {
-    font-size: 6vw;
-  }
-  .grid-container article h3 {
-    font-size: 5vw;
-  }
   .grid-container article .header h2 {
     font-size: 6vw;
   }
