@@ -269,6 +269,14 @@ body {
   grid-area: c;
 }
 
+@media screen and (max-width: 380px) {
+  .recycle h2 {
+    font-size: 6vw;
+  }
+  .recycle h3 {
+    font-size: 5vw;
+  }
+}
 .recycle-items {
   font-family: "Open Sans", sans-serif;
   grid-area: d;

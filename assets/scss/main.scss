@@ -351,6 +351,19 @@ body {
   grid-area: c;
 }
 
+@media screen and (max-width: $mobile) {
+  .recycle {
+    
+      h2 {
+        font-size: 6vw;
+      }
+      h3 {
+        font-size: 5vw;
+      }
+    }
+  }
+
+
 // @media screen and (max-width: $tablet) {
 //   .figures {
 //     display: flex;
