@@ -10,6 +10,20 @@
 
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400&display=swap");
 
+@font-face {
+  font-family: "Jakarta Vise";
+  src: url("/assets/fonts/Jakarta\ Vise.ttf");
+  src: local("☺"), url("../fonts/Jakarta\ Vise.ttf") format("ttf"),
+    url("../fonts/Jakarta\ Vise.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "JMH Typewriter";
+  src: url("/assets/fonts/JMH\ Typewriter.ttf");
+  src: local("☺"), url("../fonts/Jakarta\ Vise.ttf") format("ttf"),
+    url("../fonts/JMH\ Typewriter.ttf") format("truetype");
+}
+
 $mobile: 380px;
 $tablet: 786px;
 $desktop: 1024px;
@@ -26,7 +40,8 @@ body {
     "b b b b"
     "c c c c"
     "d d d d"
-    "e f g g"
+    "e e e e"
+    "f f g g"
     "h i j k";
 
   grid-gap: 10px;
@@ -35,56 +50,24 @@ body {
     width: 100%;
   }
 
-  article {
+  article,
+  section {
     font-family: "Open Sans", sans-serif;
     text-align: center;
-
     font-size: 30px;
 
     h2 {
+      font-family: "JMH Typewriter";
       margin: 30px 0;
       font-size: 40px;
     }
 
     h3 {
+      font-family: "JMH Typewriter";
       font-weight: 100;
       margin-top: -25px;
       margin-bottom: 20px;
       font-size: 20px;
-    }
-  }
-
-  @media screen and (max-width: $mobile) {
-    article{
-
-      .header {
-        h2 {
-          font-size: 6vw;
-        }
-        h3 {
-          font-size: 5vw;
-        }
-      }
-    }
-  }
-
-  @media screen and (max-width: $tablet) {
-    article {
-      h2 {
-        font-size: 5vw;
-      }
-      h3 {
-        font-size: 3vw;
-      }
-
-      .header {
-        h2 {
-          font-size: 5vw;
-        }
-        h3 {
-          font-size: 3vw;
-        }
-      }
     }
   }
 }
@@ -99,10 +82,29 @@ body {
       "c c"
       "d d"
       "e e"
-      "f g"
-      "h i"
+      "g g"
+      "f f"
+      "h h"
+      "i i"
       "j j"
       "k k";
+
+    article,
+    section {
+      h2 {
+        font-size: 5vw;
+      }
+      h3 {
+        font-size: 3vw;
+      }
+
+      h2 {
+        font-size: 5vw;
+      }
+      h3 {
+        font-size: 3vw;
+      }
+    }
   }
 }
 
@@ -122,6 +124,16 @@ body {
       "i"
       "j"
       "k";
+
+    article,
+    section {
+      h2 {
+        font-size: 10vw;
+      }
+      h3 {
+        font-size: 7vw;
+      }
+    }
   }
 }
 
@@ -171,6 +183,7 @@ body {
     text-align: center;
     .logo {
       margin-bottom: -15px;
+
       svg {
         backdrop-filter: blur(2px);
         width: 170px;
@@ -179,43 +192,37 @@ body {
 
     figcaption {
       h1 {
-        font-family: "Stalemate", cursive;
+        margin: 20px 15px;
+        font-family: "Jakarta Vise";
+        font-weight: 100;
         font-size: 80px;
         margin-right: 15px;
         letter-spacing: 3px;
-        color: rgba(0, 0, 0, 0.623);
+        color: rgba(0, 0, 0, 0.822);
       }
     }
 
     .quote {
-      font-family: "Open Sans", sans-serif;
+      font-family: "JMH Typewriter";
       font-weight: lighter;
       margin-top: -30px;
-      #focus {
-        font-size: 22px;
-        margin-bottom: 10px;
-        display: inline-block;
-        animation: showup 15s;
-        animation-fill-mode: forwards;
-        padding: 0;
-      }
 
       #words {
         font-size: 20px;
-        padding: 0;
+        padding: 0 10px;
         margin-top: 0px;
 
         #word1 {
           position: absolute;
           margin-left: -2100px;
-          animation: slidein1 4s;
+          animation: slidein1 3s;
           animation-delay: 1.5s;
           animation-fill-mode: forwards;
         }
         #word2 {
           position: absolute;
           margin-left: -2000px;
-          animation: slidein2 3s;
+          animation: slidein2 2s;
           animation-delay: 4s;
           animation-fill-mode: forwards;
           padding-bottom: 10px;
@@ -223,8 +230,8 @@ body {
         #word3 {
           position: absolute;
           margin-left: -2000px;
-          animation: slidein3 4s;
-          animation-delay: 4.5;
+          animation: slidein3 3s;
+          animation-delay: 2;
           animation-fill-mode: forwards;
         }
       }
@@ -261,18 +268,6 @@ body {
 
 .future {
   grid-area: b;
-  text-align: center;
-
-  @media screen and (max-width: $tablet) {
-    .header {
-      h2 {
-        font-size: 3.5vw;
-      }
-      h3 {
-        font-size: 3vw;
-      }
-    }
-  }
 
   figure {
     font-family: "Open Sans", sans-serif;
@@ -344,21 +339,6 @@ body {
   grid-area: c;
 }
 
-@media screen and (max-width: $mobile){
-.recycle {
-    
-      h2 {
-        font-size: 5vw;
-      }
-      h3 {
-        font-size: 5vw;
-      }
-    }
-
-}
-  
-  
-
 // @media screen and (max-width: $tablet) {
 //   .figures {
 //     display: flex;
@@ -388,13 +368,13 @@ body {
         font-size: 20px;
         text-align: center;
       }
-      @media screen and (max-width: $tablet) {
-        h4 {
-          margin: 5px;
-          font-size: 15px;
-          text-align: center;
-        }
-      }
+      // @media screen and (max-width: $tablet) {
+      //   h4 {
+      //     margin: 5px;
+      //     font-size: 15px;
+      //     text-align: center;
+      //   }
+      // }
       p {
         font-size: 12px;
         text-align: start;
@@ -413,18 +393,118 @@ body {
 @media screen and (max-width: $mobile) {
   .recycle-items {
     display: grid;
-    grid-template-columns: 60vw;
+    grid-template-columns: 90vw;
   }
 }
-.item5 {
+
+.contact {
   grid-area: e;
+  h3 {
+    line-height: 30px;
+    span {
+      font-weight: 600;
+    }
+  }
 }
-.item6 {
+
+@media screen and (max-width: $mobile) {
+  .contact {
+    h3 {
+      line-height: 30px;
+    }
+  }
+}
+
+.map {
   grid-area: f;
+  display: flex;
+  justify-content: center;
+  #map {
+    width: 100%;
+    margin: 0 20px;
+    header {
+      text-align: center;
+      margin: 10px;
+      h2 {
+        font-size: 30px;
+      }
+    }
+  }
 }
-.item7 {
+
+// FORM
+.form {
   grid-area: g;
+  display: flex;
+
+  form {
+    width: 30vw;
+    text-align: center;
+
+    h2 {
+      font-size: 30px;
+      margin-bottom: 20px;
+    }
+
+    input {
+      width: 100%;
+      margin: 10px 0;
+      padding: 5px;
+    }
+
+    .sendnumber {
+      display: flex;
+      justify-content: flex-end;
+      gap: 20px;
+      padding: 5px 0;
+      margin-bottom: 5px;
+
+      label {
+        margin-top: 5px;
+      }
+
+      #number {
+        height: 30px;
+      }
+      #accept {
+        width: 40px;
+        height: 30px;
+      }
+    }
+
+    textarea {
+      width: 100%;
+      height: 200px;
+    }
+
+    #send {
+      width: 50%;
+      margin: 35px 0;
+      height: 40px;
+      font-size: 15px;
+      font-weight: 300;
+    }
+  }
 }
+
+@media screen and (max-width: $tablet) {
+  .form {
+    margin: auto;
+    form {
+      width: 50vw;
+    }
+  }
+}
+
+@media screen and (max-width: $mobile) {
+  .form {
+    margin: auto;
+    form {
+      width: 100vw;
+    }
+  }
+}
+
 .item8 {
   grid-area: h;
 }

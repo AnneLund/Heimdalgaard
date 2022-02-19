@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Stalemate&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Julius+Sans+One&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400&display=swap");
@@ -7,6 +8,16 @@
   box-sizing: border-box;
 }
 
+@font-face {
+  font-family: "Jakarta Vise";
+  src: url("/assets/fonts/Jakarta Vise.ttf");
+  src: local("☺"), url("../fonts/Jakarta Vise.ttf") format("ttf"), url("../fonts/Jakarta Vise.ttf") format("truetype");
+}
+@font-face {
+  font-family: "JMH Typewriter";
+  src: url("/assets/fonts/JMH Typewriter.ttf");
+  src: local("☺"), url("../fonts/Jakarta Vise.ttf") format("ttf"), url("../fonts/JMH Typewriter.ttf") format("truetype");
+}
 body {
   max-width: 1920px;
 }
@@ -14,55 +25,54 @@ body {
 .grid-container {
   display: grid;
   grid-template-columns: auto auto auto auto;
-  grid-template-areas: "a a a a" "b b b b" "c c c c" "d d d d" "e f g g" "h i j k";
+  grid-template-areas: "a a a a" "b b b b" "c c c c" "d d d d" "e e e e" "f f g g" "h i j k";
   grid-gap: 10px;
 }
 .grid-container img {
   width: 100%;
 }
-.grid-container article {
+.grid-container article,
+.grid-container section {
   font-family: "Open Sans", sans-serif;
   text-align: center;
   font-size: 30px;
 }
-.grid-container article h2 {
+.grid-container article h2,
+.grid-container section h2 {
+  font-family: "JMH Typewriter";
   margin: 30px 0;
   font-size: 40px;
 }
-.grid-container article h3 {
+.grid-container article h3,
+.grid-container section h3 {
+  font-family: "JMH Typewriter";
   font-weight: 100;
   margin-top: -25px;
   margin-bottom: 20px;
   font-size: 20px;
-}
-@media screen and (max-width: 380px) {
-  .grid-container article .header h2 {
-    font-size: 6vw;
-  }
-  .grid-container article .header h3 {
-    font-size: 5vw;
-  }
-}
-@media screen and (max-width: 786px) {
-  .grid-container article h2 {
-    font-size: 5vw;
-  }
-  .grid-container article h3 {
-    font-size: 3vw;
-  }
-  .grid-container article .header h2 {
-    font-size: 5vw;
-  }
-  .grid-container article .header h3 {
-    font-size: 3vw;
-  }
 }
 
 @media screen and (max-width: 786px) {
   .grid-container {
     display: grid;
     grid-template-columns: auto auto;
-    grid-template-areas: "a a" "b b" "c c" "d d" "e e" "f g" "h i" "j j" "k k";
+    grid-template-areas: "a a" "b b" "c c" "d d" "e e" "g g" "f f" "h h" "i i" "j j" "k k";
+  }
+  .grid-container article h2,
+.grid-container section h2 {
+    font-size: 5vw;
+  }
+  .grid-container article h3,
+.grid-container section h3 {
+    font-size: 3vw;
+  }
+  .grid-container article h2,
+.grid-container section h2 {
+    font-size: 5vw;
+  }
+  .grid-container article h3,
+.grid-container section h3 {
+    font-size: 3vw;
   }
 }
 @media screen and (max-width: 380px) {
@@ -70,6 +80,14 @@ body {
     display: grid;
     grid-template-columns: auto;
     grid-template-areas: "a" "b" "c" "d" "e" "f" "g" "h" "i" "j" "k";
+  }
+  .grid-container article h2,
+.grid-container section h2 {
+    font-size: 10vw;
+  }
+  .grid-container article h3,
+.grid-container section h3 {
+    font-size: 7vw;
   }
 }
 .main-header {
@@ -119,37 +137,29 @@ body {
   width: 170px;
 }
 .main-header .logo-container figcaption h1 {
-  font-family: "Stalemate", cursive;
+  margin: 20px 15px;
+  font-family: "Jakarta Vise";
+  font-weight: 100;
   font-size: 80px;
   margin-right: 15px;
   letter-spacing: 3px;
-  color: rgba(0, 0, 0, 0.623);
+  color: rgba(0, 0, 0, 0.822);
 }
 .main-header .logo-container .quote {
-  font-family: "Open Sans", sans-serif;
+  font-family: "JMH Typewriter";
   font-weight: lighter;
   margin-top: -30px;
 }
-.main-header .logo-container .quote #focus {
-  font-size: 22px;
-  margin-bottom: 10px;
-  display: inline-block;
-  -webkit-animation: showup 15s;
-          animation: showup 15s;
-  -webkit-animation-fill-mode: forwards;
-          animation-fill-mode: forwards;
-  padding: 0;
-}
 .main-header .logo-container .quote #words {
   font-size: 20px;
-  padding: 0;
+  padding: 0 10px;
   margin-top: 0px;
 }
 .main-header .logo-container .quote #words #word1 {
   position: absolute;
   margin-left: -2100px;
-  -webkit-animation: slidein1 4s;
-          animation: slidein1 4s;
+  -webkit-animation: slidein1 3s;
+          animation: slidein1 3s;
   -webkit-animation-delay: 1.5s;
           animation-delay: 1.5s;
   -webkit-animation-fill-mode: forwards;
@@ -158,8 +168,8 @@ body {
 .main-header .logo-container .quote #words #word2 {
   position: absolute;
   margin-left: -2000px;
-  -webkit-animation: slidein2 3s;
-          animation: slidein2 3s;
+  -webkit-animation: slidein2 2s;
+          animation: slidein2 2s;
   -webkit-animation-delay: 4s;
           animation-delay: 4s;
   -webkit-animation-fill-mode: forwards;
@@ -169,10 +179,10 @@ body {
 .main-header .logo-container .quote #words #word3 {
   position: absolute;
   margin-left: -2000px;
-  -webkit-animation: slidein3 4s;
-          animation: slidein3 4s;
-  -webkit-animation-delay: 4.5;
-          animation-delay: 4.5;
+  -webkit-animation: slidein3 3s;
+          animation: slidein3 3s;
+  -webkit-animation-delay: 2;
+          animation-delay: 2;
   -webkit-animation-fill-mode: forwards;
           animation-fill-mode: forwards;
 }
@@ -200,15 +210,6 @@ body {
 }
 .future {
   grid-area: b;
-  text-align: center;
-}
-@media screen and (max-width: 786px) {
-  .future .header h2 {
-    font-size: 3.5vw;
-  }
-  .future .header h3 {
-    font-size: 3vw;
-  }
 }
 .future figure {
   font-family: "Open Sans", sans-serif;
@@ -260,14 +261,6 @@ body {
   grid-area: c;
 }
 
-@media screen and (max-width: 380px) {
-  .recycle h2 {
-    font-size: 5vw;
-  }
-  .recycle h3 {
-    font-size: 5vw;
-  }
-}
 .recycle-items {
   font-family: "Open Sans", sans-serif;
   grid-area: d;
@@ -284,13 +277,6 @@ body {
   font-size: 20px;
   text-align: center;
 }
-@media screen and (max-width: 786px) {
-  .recycle-items figure figcaption h4 {
-    margin: 5px;
-    font-size: 15px;
-    text-align: center;
-  }
-}
 .recycle-items figure figcaption p {
   font-size: 12px;
   text-align: start;
@@ -305,21 +291,103 @@ body {
 @media screen and (max-width: 380px) {
   .recycle-items {
     display: grid;
-    grid-template-columns: 60vw;
+    grid-template-columns: 90vw;
   }
 }
-.item5 {
+.contact {
   grid-area: e;
 }
+.contact h3 {
+  line-height: 30px;
+}
+.contact h3 span {
+  font-weight: 600;
+}
 
-.item6 {
+@media screen and (max-width: 380px) {
+  .contact h3 {
+    line-height: 30px;
+  }
+}
+.map {
   grid-area: f;
+  display: flex;
+  justify-content: center;
+}
+.map #map {
+  width: 100%;
+  margin: 0 20px;
+}
+.map #map header {
+  text-align: center;
+  margin: 10px;
+}
+.map #map header h2 {
+  font-size: 30px;
 }
 
-.item7 {
+.form {
   grid-area: g;
+  display: flex;
+}
+.form form {
+  width: 30vw;
+  text-align: center;
+}
+.form form h2 {
+  font-size: 30px;
+  margin-bottom: 20px;
+}
+.form form input {
+  width: 100%;
+  margin: 10px 0;
+  padding: 5px;
+}
+.form form .sendnumber {
+  display: flex;
+  justify-content: flex-end;
+  gap: 20px;
+  padding: 5px 0;
+  margin-bottom: 5px;
+}
+.form form .sendnumber label {
+  margin-top: 5px;
+}
+.form form .sendnumber #number {
+  height: 30px;
+}
+.form form .sendnumber #accept {
+  width: 40px;
+  height: 30px;
+}
+.form form textarea {
+  width: 100%;
+  height: 200px;
+}
+.form form #send {
+  width: 50%;
+  margin: 35px 0;
+  height: 40px;
+  font-size: 15px;
+  font-weight: 300;
 }
 
+@media screen and (max-width: 786px) {
+  .form {
+    margin: auto;
+  }
+  .form form {
+    width: 50vw;
+  }
+}
+@media screen and (max-width: 380px) {
+  .form {
+    margin: auto;
+  }
+  .form form {
+    width: 100vw;
+  }
+}
 .item8 {
   grid-area: h;
 }

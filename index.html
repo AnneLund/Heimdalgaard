@@ -8,6 +8,10 @@
     <link rel="stylesheet" href="./assets/css/main.css" />
     <link rel="stylesheet" href="./assets/css/keyframes.css" />
     <script src="./assets/script/script.js" defer></script>
+    <script
+      src="https://map.krak.dk/?c=56.219317,9.448673&z=14&q=%22mausingvej%2015%22;201070280;geo"
+      async
+    ></script>
   </head>
   <body>
     <div class="grid-container">
@@ -2553,16 +2557,16 @@
       <!-- BÆREDYGTIGHED OG OMTANKE -->
       <article class="recycle">
         <header class="header">
-        <h2>Bæredygtighed og omtanke</h2>
-        <h3>
-          Heimdalgaard vil være med til at sætte en NY dagsorden indenfor
-          klimavenligt landbrug.
-        </h3>
-      </header>
+          <h2>Bæredygtighed og omtanke</h2>
+          <h3>
+            Heimdalgaard vil være med til at sætte en NY dagsorden indenfor
+            klimavenligt landbrug.
+          </h3>
+        </header>
       </article>
 
       <!-- RECYCLE-ITEMS -->
-      <div class="recycle-items">
+      <article class="recycle-items">
         <figure>
           <img src="./assets/img/seeds.jpeg" />
           <figcaption>
@@ -2606,13 +2610,78 @@
             </p>
           </figcaption>
         </figure>
-      </div>
-      <!-- ITEM5 -->
-      <div class="item5"></div>
+      </article>
+      <!-- KONTAKT -->
+      <article class="contact">
+        <header class="header">
+          <h2>Kontakt</h2>
+          <h3>
+            Vi sidder altid klar til at svare på spørgsmål. <br />
+            <span> Ring eller skriv til os på +45 53 69 80 40</span> <br />
+            eller send os en besked via nedenstående formular.
+          </h3>
+        </header>
+      </article>
       <!-- ITEM6 -->
-      <div class="item6"></div>
-      <!-- ITEM7 -->
-      <div class="item7"></div>
+      <section class="map">
+        <div id="map">
+          <header>
+            <h2>HER ER VI</h2>
+          </header>
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2218.398958377084!2d9.44682585497802!3d56.21934389061539!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x464bf2c30a5dcacf%3A0x270253582288e356!2sMausingvej%2015%2C%208600%20Silkeborg!5e0!3m2!1sda!2sdk!4v1645292698568!5m2!1sda!2sdk"
+            width="600"
+            height="450"
+            style="border: 0"
+            allowfullscreen=""
+            loading="lazy"
+          ></iframe>
+        </div>
+      </section>
+
+      <!-- FORMULAR -->
+      <section class="form">
+        <div class="formular">
+          <div class="form">
+            <form>
+              <h2>SEND EN BESKED</h2>
+
+              <div>
+                <input
+                  type="text"
+                  name="name"
+                  id="name"
+                  placeholder="Fulde navn:"
+                />
+              </div>
+
+              <div>
+                <input
+                  type="email"
+                  name="email"
+                  id="email"
+                  placeholder="Email:"
+                />
+              </div>
+
+              <div class="sendnumber">
+                <input
+                  type="number"
+                  name="number"
+                  id="number"
+                  placeholder="Telefonnummer:"
+                />
+              </div>
+
+              <div>
+                <textarea id="message" placeholder="Besked:"></textarea>
+              </div>
+
+              <button type="button" id="send">Send besked</button>
+            </form>
+          </div>
+        </div>
+      </section>
       <!-- ITEM8 -->
       <div class="item8">8</div>
       <!-- ITEM9 -->
