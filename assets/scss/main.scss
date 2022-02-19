@@ -629,50 +629,6 @@ body {
   fill: #99c547;
 }
 
-#topleaf {
-  animation: blow1 2s infinite alternate;
-  transform-origin: left;
-  transform-box: fill-box;
-}
-
-@keyframes blow1 {
-  from {
-    transform: rotateY(0deg) rotateX(0deg);
-  }
-  to {
-    transform: rotateY(-40deg) rotateX(10deg);
-  }
-}
-
-#middleleafright {
-  animation: blow2 1s infinite alternate;
-  transform-origin: bottom left;
-  transform-box: fill-box;
-}
-
-@keyframes blow2 {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(10deg);
-  }
-}
-
-#leftbottomforstleaf {
-  animation: blow3 3s infinite alternate;
-  transform-origin: left bottom;
-  transform-box: fill-box;
-}
-
-@keyframes blow3 {
-  from {
-    transform: rotateY(0deg);
-  }
-  to {
-    transform: rotate(20deg);
-  }
-}
 .cls-5 {
   fill: #b9ee56;
 }
