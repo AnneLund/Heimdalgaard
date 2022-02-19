@@ -182,11 +182,12 @@ body {
     top: 60px;
     text-align: center;
     .logo {
+      margin: auto;
       margin-bottom: -15px;
-
+      width: 50%;
       svg {
         backdrop-filter: blur(2px);
-        width: 170px;
+        width: 100%;
       }
     }
 
@@ -268,19 +269,21 @@ body {
 
 .future {
   grid-area: b;
-
   figure {
     font-family: "Open Sans", sans-serif;
-
-    img {
-      width: 50%;
+    div {
+      width: 55%;
+      margin: auto;
+      img {
+        width: 100%;
+      }
     }
 
-    // @media screen and (max-width: $mobile) {
-    //   img {
-    //     margin: 20px 0;
-    //   }
-    // }
+    @media screen and (max-width: $mobile) {
+      div {
+        width: 80%;
+      }
+    }
 
     figcaption {
       margin-top: 20px;
@@ -295,12 +298,6 @@ body {
           font-size: 15px;
         }
       }
-
-      // @media screen and (max-width: $tablet) {
-      //   div {
-      //     width: 50%;
-      //   }
-      // }
 
       @media screen and (max-width: $mobile) {
         div {
@@ -339,20 +336,6 @@ body {
   grid-area: c;
 }
 
-// @media screen and (max-width: $tablet) {
-//   .figures {
-//     display: flex;
-//     flex-direction: column;
-//   }
-// }
-
-// @media screen and (max-width: $mobile) {
-//   .figures {
-//     display: flex;
-//     flex-direction: column;
-//   }
-// }
-
 .recycle-items {
   font-family: "Open Sans", sans-serif;
   grid-area: d;
@@ -368,13 +351,7 @@ body {
         font-size: 20px;
         text-align: center;
       }
-      // @media screen and (max-width: $tablet) {
-      //   h4 {
-      //     margin: 5px;
-      //     font-size: 15px;
-      //     text-align: center;
-      //   }
-      // }
+
       p {
         font-size: 12px;
         text-align: start;

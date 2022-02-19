@@ -129,12 +129,14 @@ body {
   text-align: center;
 }
 .main-header .logo-container .logo {
+  margin: auto;
   margin-bottom: -15px;
+  width: 50%;
 }
 .main-header .logo-container .logo svg {
   -webkit-backdrop-filter: blur(2px);
           backdrop-filter: blur(2px);
-  width: 170px;
+  width: 100%;
 }
 .main-header .logo-container figcaption h1 {
   margin: 20px 15px;
@@ -214,8 +216,17 @@ body {
 .future figure {
   font-family: "Open Sans", sans-serif;
 }
-.future figure img {
-  width: 50%;
+.future figure div {
+  width: 55%;
+  margin: auto;
+}
+.future figure div img {
+  width: 100%;
+}
+@media screen and (max-width: 380px) {
+  .future figure div {
+    width: 80%;
+  }
 }
 .future figure figcaption {
   margin-top: 20px;
