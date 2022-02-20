@@ -34,7 +34,7 @@ body {
 
 .grid-container {
   display: grid;
-  grid-template-columns: auto auto auto auto;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
   grid-template-areas:
     "a a a a"
     "b b b b"
@@ -75,7 +75,7 @@ body {
 @media screen and (max-width: $tablet) {
   .grid-container {
     display: grid;
-    grid-template-columns: auto auto;
+    grid-template-columns: 1fr 1fr;
     grid-template-areas:
       "a a"
       "b b"
@@ -111,15 +111,15 @@ body {
 @media screen and (max-width: $mobile) {
   .grid-container {
     display: grid;
-    grid-template-columns: auto;
+    grid-template-columns: 1fr;
     grid-template-areas:
       "a"
       "b"
       "c"
       "d"
       "e"
-      "f"
       "g"
+      "f"
       "h"
       "i"
       "j"
@@ -272,8 +272,8 @@ body {
   figure {
     font-family: "Open Sans", sans-serif;
     div {
-      width: 55%;
-      margin: auto;
+      width: 70%;
+      margin: 40px auto;
       img {
         width: 100%;
       }
@@ -282,11 +282,12 @@ body {
     @media screen and (max-width: $mobile) {
       div {
         width: 80%;
+        margin: 30px auto;
       }
     }
 
     figcaption {
-      margin-top: 20px;
+      margin-top: 10px;
       padding: 0 40px;
       display: flex;
       justify-content: center;
@@ -413,10 +414,11 @@ body {
 .form {
   grid-area: g;
   display: flex;
+  justify-content: center;
 
   form {
-    width: 30vw;
-    text-align: center;
+    margin: auto;
+    width: 35vw;
 
     h2 {
       font-size: 30px;
