@@ -29,7 +29,8 @@ $tablet: 786px;
 $desktop: 1024px;
 
 body {
-  max-width: 1920px;
+  max-width: 1630px;
+  margin: auto;
 }
 
 .grid-container {
@@ -129,10 +130,19 @@ body {
     article,
     section {
       h2 {
-        font-size: 10vw;
+        font-size: 8vw;
       }
       h3 {
         font-size: 7vw;
+      }
+
+      .header {
+        h2 {
+          font-size: 6vw;
+        }
+        h3 {
+          font-size: 4vw;
+        }
       }
     }
   }
@@ -141,10 +151,10 @@ body {
 //MAIN-HEADER
 
 .main-header {
-  grid-area: a;
-  position: relative;
   display: flex;
   justify-content: center;
+  grid-area: a;
+  position: relative;
   background-image: url(../img/background.jpeg);
   background-color: #e7e7e74b;
   background-blend-mode: hue;
@@ -152,117 +162,234 @@ body {
   background-position: center;
   height: 60vh;
   overflow: hidden;
-
-  svg {
-    .cls-1 {
-      opacity: 0.5;
-    }
-    .cls-2 {
-      fill: transparent;
-    }
-    .cls-2,
-    .cls-3 {
-      stroke: #f2ffb4;
-      stroke-miterlimit: 10;
-      stroke-width: 4px;
-    }
-    .cls-2,
-    .cls-4 {
-      opacity: 0.5;
-    }
-    .cls-3 {
-      fill: #fbf8c4;
-      opacity: 1;
-    }
-  }
-
-  //LOGO OG TITEL
-
-  .logo-container {
-    position: absolute;
-    top: 60px;
-    text-align: center;
-    .logo {
-      margin: auto;
-      margin-bottom: -15px;
-      width: 50%;
-      svg {
-        backdrop-filter: blur(2px);
-        width: 100%;
-      }
-    }
-
-    figcaption {
-      h1 {
-        margin: 20px 15px;
-        font-family: "Jakarta Vise";
-        font-weight: 100;
-        font-size: 80px;
-        margin-right: 15px;
-        letter-spacing: 3px;
-        color: rgba(0, 0, 0, 0.822);
-      }
-    }
-
-    .quote {
-      font-family: "JMH Typewriter";
-      font-weight: lighter;
-      margin-top: -30px;
-
-      #words {
-        font-size: 20px;
-        padding: 0 10px;
-        margin-top: 0px;
-
-        #word1 {
-          position: absolute;
-          margin-left: -2100px;
-          animation: slidein1 3s;
-          animation-delay: 1.5s;
-          animation-fill-mode: forwards;
-        }
-        #word2 {
-          position: absolute;
-          margin-left: -2000px;
-          animation: slidein2 2s;
-          animation-delay: 4s;
-          animation-fill-mode: forwards;
-          padding-bottom: 10px;
-        }
-        #word3 {
-          position: absolute;
-          margin-left: -2000px;
-          animation: slidein3 3s;
-          animation-delay: 2;
-          animation-fill-mode: forwards;
-        }
-      }
-
-      @media screen and (max-width: $mobile) {
-        #words {
-          font-size: 5vw;
-          margin: 0 20px;
-        }
-      }
-    }
-  }
-
-  @media screen and (max-width: $mobile) {
-    .logo-container {
-      padding: 0 20px;
-    }
-  }
 }
 
-@media screen and (max-width: $mobile) {
+@media screen and (max-width: $tablet) {
   .main-header {
     height: 65vh;
   }
 }
 
+#burger-menu {
+  position: fixed;
+  right: 0;
+  top: 0;
+  cursor: pointer;
+  margin: 50px 40px 20px 20px;
+  height: 27px;
+  width: 27px;
+  overflow: visible;
+  z-index: 2;
+  background: none;
+  span {
+    background: rgb(0, 0, 0);
+    display: block;
+    height: 2px;
+    opacity: 1;
+    position: absolute;
+    z-index: 3;
+    transition: 0.3s ease-in-out;
+    width: 27px;
+    &:before {
+      background: rgb(0, 0, 0);
+      display: block;
+      height: 2px;
+      position: absolute;
+      transition: 0.3s ease-in-out;
+      content: "";
+      left: 0px;
+      top: -10px;
+      width: 27px;
+    }
+    &:after {
+      background: rgb(0, 0, 0);
+      display: block;
+      height: 2px;
+      position: absolute;
+      transition: 0.3s ease-in-out;
+      content: "";
+      left: 0px;
+      top: 10px;
+      width: 27px;
+    }
+  }
+}
+#burger-menu.close {
+  margin: 50px 40px 20px 20px;
+  span {
+    transform: rotate(-45deg);
+    width: 27px;
+    background: rgb(255, 255, 255);
+
+    &:before {
+      top: 0px;
+      transform: rotate(90deg);
+      width: 27px;
+      background: rgb(255, 255, 255);
+    }
+    &:after {
+      background: rgb(255, 255, 255);
+      top: 0px;
+      left: 0;
+      transform: rotate(90deg);
+      opacity: 0;
+      width: 0;
+    }
+  }
+}
+
+#menu {
+  z-index: 1;
+  min-width: 100%;
+  min-height: 100%;
+  position: fixed;
+  top: 0;
+  height: 0;
+  visibility: hidden;
+  opacity: 0;
+  text-align: center;
+  padding-top: 20px;
+  transition: all 0.3s ease-in-out;
+  li {
+    list-style: none;
+  }
+  a {
+    color: #fff;
+    display: block;
+    font-size: 32px;
+    margin-bottom: 30px;
+    text-decoration: none;
+  }
+}
+#menu.overlay {
+  visibility: visible;
+  opacity: 1;
+  padding-top: 100px;
+  background: rgba(0, 0, 0, 0.74);
+}
+
+svg {
+  .cls-1 {
+    opacity: 0.5;
+  }
+  .cls-2 {
+    fill: transparent;
+  }
+  .cls-2,
+  .cls-3 {
+    stroke: #f2ffb4;
+    stroke-miterlimit: 10;
+    stroke-width: 4px;
+  }
+  .cls-2,
+  .cls-4 {
+    opacity: 0.5;
+  }
+  .cls-3 {
+    fill: #fbf8c4;
+    opacity: 1;
+  }
+}
+
+//LOGO OG TITEL
+.logo {
+  text-align: center;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  margin: 40px auto;
+  svg {
+    width: 15vw;
+  }
+
+  @media screen and (max-width: $tablet) {
+    svg {
+      width: 25vw;
+    }
+  }
+
+  @media screen and (max-width: $mobile) {
+    svg {
+      width: 40vw;
+    }
+  }
+  figcaption {
+    h1 {
+      margin-top: 10px;
+      font-family: "Jakarta Vise";
+      font-weight: 100;
+      font-size: 80px;
+      letter-spacing: 3px;
+      color: rgba(0, 0, 0, 0.822);
+    }
+    @media screen and (max-width: $mobile) {
+      h1 {
+        margin-top: 5px;
+        font-size: 20vw;
+      }
+    }
+    #words {
+      margin-top: -20px;
+      display: flex;
+      justify-content: center;
+      gap: 2.5vw;
+      font-size: 20px;
+      font-family: "JMH Typewriter";
+      font-weight: lighter;
+
+      #word1 {
+        opacity: 0%;
+        animation: slidein1 2s;
+        animation-delay: 1s;
+        animation-fill-mode: forwards;
+        transform-box: fill-box;
+        transform-origin: center;
+      }
+      #word2 {
+        opacity: 0%;
+        animation: slidein2 2s;
+        animation-delay: 2s;
+        animation-fill-mode: forwards;
+        transform-box: fill-box;
+        transform-origin: center;
+      }
+      #word3 {
+        opacity: 0%;
+        animation: slidein3 2s;
+        animation-delay: 3s;
+        animation-fill-mode: forwards;
+        transform-box: fill-box;
+        transform-origin: center;
+      }
+    }
+    @media screen and (max-width: $tablet) {
+      #words {
+        padding-top: 10px;
+        gap: 7vw;
+        font-size: 25px;
+      }
+    }
+
+    @media screen and (max-width: $mobile) {
+      #words {
+        padding-top: 10px;
+        gap: 9vw;
+        font-size: 15px;
+      }
+    }
+  }
+}
+
 @media screen and (max-width: $tablet) {
-  .main-header {
-    height: 60vh;
+  .logo {
+    top: 0px;
+    margin: 50px auto;
+  }
+}
+
+@media screen and (max-width: $mobile) {
+  .logo {
+    margin: 80px 0;
   }
 }
 
@@ -399,11 +526,28 @@ body {
   display: flex;
   justify-content: center;
   #map {
-    width: 100%;
     header {
       text-align: center;
       h2 {
         font-size: 30px;
+      }
+    }
+    iframe {
+      border: 0;
+      width: 35vw;
+      height: 65vh;
+    }
+    @media screen and (max-width: $mobile) {
+      iframe {
+        width: 100%;
+        height: 55vh;
+      }
+    }
+
+    @media screen and (max-width: $tablet) {
+      iframe {
+        width: 80vw;
+        height: 55vh;
       }
     }
   }
@@ -475,9 +619,9 @@ body {
 
 @media screen and (max-width: $mobile) {
   .form {
-    margin: auto;
+    margin: 0 10px;
     form {
-      width: 100vw;
+      width: 100%;
     }
   }
 }
@@ -493,104 +637,6 @@ body {
 }
 .item11 {
   grid-area: k;
-}
-
-#burger-menu {
-  position: fixed;
-  right: 0;
-  top: 0;
-  cursor: pointer;
-  margin: 50px 40px 20px 20px;
-  height: 27px;
-  width: 27px;
-  overflow: visible;
-  z-index: 2;
-  background: none;
-  span {
-    background: rgb(0, 0, 0);
-    display: block;
-    height: 2px;
-    opacity: 1;
-    position: absolute;
-    z-index: 3;
-    transition: 0.3s ease-in-out;
-    width: 27px;
-    &:before {
-      background: rgb(0, 0, 0);
-      display: block;
-      height: 2px;
-      position: absolute;
-      transition: 0.3s ease-in-out;
-      content: "";
-      left: 0px;
-      top: -10px;
-      width: 27px;
-    }
-    &:after {
-      background: rgb(0, 0, 0);
-      display: block;
-      height: 2px;
-      position: absolute;
-      transition: 0.3s ease-in-out;
-      content: "";
-      left: 0px;
-      top: 10px;
-      width: 27px;
-    }
-  }
-}
-#burger-menu.close {
-  margin: 50px 40px 20px 20px;
-  span {
-    transform: rotate(-45deg);
-    width: 27px;
-    background: rgb(255, 255, 255);
-
-    &:before {
-      top: 0px;
-      transform: rotate(90deg);
-      width: 27px;
-      background: rgb(255, 255, 255);
-    }
-    &:after {
-      background: rgb(255, 255, 255);
-      top: 0px;
-      left: 0;
-      transform: rotate(90deg);
-      opacity: 0;
-      width: 0;
-    }
-  }
-}
-
-#menu {
-  z-index: 1;
-  min-width: 100%;
-  min-height: 100%;
-  position: fixed;
-  top: 0;
-  height: 0;
-  visibility: hidden;
-  opacity: 0;
-  text-align: center;
-  padding-top: 20px;
-  transition: all 0.3s ease-in-out;
-  li {
-    list-style: none;
-  }
-  a {
-    color: #fff;
-    display: block;
-    font-size: 32px;
-    margin-bottom: 30px;
-    text-decoration: none;
-  }
-}
-#menu.overlay {
-  visibility: visible;
-  opacity: 1;
-  padding-top: 100px;
-  background: rgba(0, 0, 0, 0.74);
 }
 
 .cls-1 {

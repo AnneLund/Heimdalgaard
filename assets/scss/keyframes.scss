@@ -178,31 +178,37 @@
 
 @keyframes slidein1 {
   0% {
-    margin-left: -2000px;
+    opacity: 0%;
+    transform: scaleX(0);
   }
 
   100% {
-    margin-left: -170px;
+    opacity: 100%;
+    transform: scaleX(1);
   }
 }
 
 @keyframes slidein2 {
   0% {
-    margin-left: -2000px;
+    opacity: 0%;
+    transform: scaleX(0);
   }
 
   100% {
-    margin-left: -75px;
+    opacity: 100%;
+    transform: scaleX(1);
   }
 }
 
 @keyframes slidein3 {
   0% {
-    margin-left: -2000px;
+    opacity: 0%;
+    transform: scaleX(0);
   }
 
   100% {
-    margin-left: 50px;
+    opacity: 100%;
+    transform: scaleX(1);
   }
 }
 
