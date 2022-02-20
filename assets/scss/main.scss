@@ -55,19 +55,20 @@ body {
     font-family: "Open Sans", sans-serif;
     text-align: center;
     font-size: 30px;
+    header {
+      h2 {
+        font-family: "JMH Typewriter";
+        margin: 30px 0;
+        font-size: 40px;
+      }
 
-    h2 {
-      font-family: "JMH Typewriter";
-      margin: 30px 0;
-      font-size: 40px;
-    }
-
-    h3 {
-      font-family: "JMH Typewriter";
-      font-weight: 100;
-      margin-top: -25px;
-      margin-bottom: 20px;
-      font-size: 20px;
+      h3 {
+        font-family: "JMH Typewriter";
+        font-weight: 100;
+        margin-top: -25px;
+        margin-bottom: 20px;
+        font-size: 20px;
+      }
     }
   }
 }
@@ -140,10 +141,10 @@ body {
 //MAIN-HEADER
 
 .main-header {
+  grid-area: a;
   position: relative;
   display: flex;
   justify-content: center;
-  grid-area: a;
   background-image: url(../img/background.jpeg);
   background-color: #e7e7e74b;
   background-blend-mode: hue;
@@ -338,8 +339,8 @@ body {
 }
 
 .recycle-items {
-  font-family: "Open Sans", sans-serif;
   grid-area: d;
+  font-family: "Open Sans", sans-serif;
   display: grid;
   grid-template-columns: 13vw 13vw 13vw 13vw;
   grid-gap: 10px;
