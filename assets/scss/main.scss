@@ -400,10 +400,8 @@ body {
   justify-content: center;
   #map {
     width: 100%;
-    margin: 0 20px;
     header {
       text-align: center;
-      margin: 10px;
       h2 {
         font-size: 30px;
       }
@@ -414,16 +412,15 @@ body {
 // FORM
 .form {
   grid-area: g;
-  display: flex;
-  justify-content: center;
 
   form {
-    margin: auto;
     width: 35vw;
+    header {
+      text-align: center;
 
-    h2 {
-      font-size: 30px;
-      margin-bottom: 20px;
+      h2 {
+        font-size: 30px;
+      }
     }
 
     input {
