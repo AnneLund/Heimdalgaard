@@ -170,8 +170,8 @@ body {
   grid-area: a;
   position: relative;
   background-image: url(../img/background.jpeg);
-  background-color: #849e4396;
-  background-blend-mode: multiply;
+  background-color: #849e43a8;
+  background-blend-mode: soft-light;
   background-size: cover;
   background-position: center;
   height: 60vh;
@@ -418,8 +418,8 @@ svg {
 
   @media screen and (max-width: $mobile) {
     img {
-      width: 80%;
-      margin: 30px auto;
+      width: 100%;
+      margin: 30px;
     }
   }
 
@@ -492,6 +492,18 @@ svg {
   }
 
   @media screen and (max-width: $mobile) {
+    .cards {
+      display: flex;
+      flex-direction: column;
+      margin: 20px 0;
+      .card {
+        width: 100%;
+        margin: 0 10px;
+      }
+    }
+  }
+
+  @media screen and (max-width: $tablet) {
     .cards {
       display: flex;
       flex-direction: column;

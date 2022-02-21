@@ -119,8 +119,8 @@ body {
   grid-area: a;
   position: relative;
   background-image: url(../img/background.jpeg);
-  background-color: #849e4396;
-  background-blend-mode: multiply;
+  background-color: #849e43a8;
+  background-blend-mode: soft-light;
   background-size: cover;
   background-position: center;
   height: 60vh;
@@ -363,8 +363,8 @@ svg .cls-3 {
 }
 @media screen and (max-width: 380px) {
   .future img {
-    width: 80%;
-    margin: 30px auto;
+    width: 100%;
+    margin: 30px;
   }
 }
 .future #whoarewe {
@@ -428,6 +428,17 @@ svg .cls-3 {
   padding: 0 50px;
 }
 @media screen and (max-width: 380px) {
+  .blog .cards {
+    display: flex;
+    flex-direction: column;
+    margin: 20px 0;
+  }
+  .blog .cards .card {
+    width: 100%;
+    margin: 0 10px;
+  }
+}
+@media screen and (max-width: 786px) {
   .blog .cards {
     display: flex;
     flex-direction: column;
