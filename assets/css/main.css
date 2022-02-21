@@ -406,7 +406,7 @@ svg .cls-3 {
 .blog {
   grid-area: c;
   background-color: rgba(110, 110, 110, 0.712);
-  background-image: url(/assets/img/production.jpg);
+  background-image: url(../img/production.jpg);
   background-size: cover;
   background-blend-mode: hue;
   background-position: top;
@@ -614,11 +614,22 @@ footer #logo {
   width: 200px;
   margin-top: -20px;
 }
+footer .sm {
+  font-size: 15px;
+  margin: 5px;
+}
+footer .sm i {
+  color: white;
+  margin: 0 8px;
+}
 footer p {
   font-size: 10px;
+  color: rgba(255, 255, 255, 0.678);
+  margin-top: 20px;
 }
 footer h2 {
   font-family: "Jakarta Vise";
+  font-weight: 100;
   margin-top: -40px;
 }
 
