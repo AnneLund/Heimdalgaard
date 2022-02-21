@@ -30,7 +30,7 @@ body {
 .grid-container {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
-  grid-template-areas: "a a a a" "b b b b" "c c c c" "d d d d" "e e e e" "f f f f" "g g h h" "i i i i" "j j j j" "k k k k";
+  grid-template-areas: "a a a a" "b b b b" "c c c c" "d d e e" "f f f f" "g g g g" "h h h h" "i i i i" "j j k k" "l l l l";
   grid-gap: 10px;
 }
 .grid-container img {
@@ -71,7 +71,7 @@ body {
   .grid-container {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-template-areas: "a a" "b b" "c c" "d d" "e e" "g g" "f f" "h h" "i i" "j j" "k k";
+    grid-template-areas: "a a" "b b" "c c" "d d" "e e" "g g" "f f" "h h" "i i" "j j" "k k" "l l";
   }
   .grid-container article h2,
 .grid-container section h2 {
@@ -94,7 +94,7 @@ body {
   .grid-container {
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-areas: "a" "b" "c" "d" "e" "g" "f" "h" "i" "j" "k";
+    grid-template-areas: "a" "b" "c" "d" "e" "g" "f" "h" "i" "j" "k" "l";
   }
   .grid-container article h2,
 .grid-container section h2 {
@@ -134,7 +134,7 @@ body {
 }
 #burger-menu {
   position: fixed;
-  right: 0;
+  right: 0px;
   top: 0;
   cursor: pointer;
   margin: 50px 40px 20px 20px;
@@ -356,59 +356,84 @@ svg .cls-3 {
 }
 .future {
   grid-area: b;
+  padding: 30px;
 }
-.future img {
-  width: 60%;
-  margin: 40px auto;
+
+.img {
+  width: 80%;
+  grid-area: c;
+  margin: auto;
 }
+
 @media screen and (max-width: 380px) {
-  .future img {
-    width: 100%;
-    margin: 30px;
+  .img {
+    width: 80%;
+    margin-top: -30px;
   }
 }
-.future #whoarewe {
-  display: flex;
-  justify-content: center;
+@media screen and (max-width: 786px) {
+  .img {
+    width: 80%;
+    margin-top: -30px;
+  }
 }
-.future #whoarewe .text {
-  width: 30vw;
-  margin: 0 30px;
+.whoarewe {
+  grid-area: d;
+  margin: 50px;
 }
-.future #whoarewe .text h4 {
+.whoarewe h4 {
   font-size: 20px;
 }
-.future #whoarewe .text p {
+.whoarewe p {
   font-size: 15px;
 }
+
+.whoareyou {
+  grid-area: e;
+  margin: 50px;
+}
+.whoareyou h4 {
+  font-size: 20px;
+}
+.whoareyou p {
+  font-size: 15px;
+}
+
 @media screen and (max-width: 380px) {
-  .future #whoarewe .text {
-    width: 100%;
-    padding: 5px;
-  }
-  .future #whoarewe .text h4 {
-    font-size: 17px;
+  .whoarewe h4,
+.whoareyou h4 {
+    margin: 20px 10px;
+    font-size: 20px;
   }
 }
-.future #whoarewe h4 {
+@media screen and (max-width: 786px) {
+  .whoarewe,
+.whoareyou {
+    margin: 0 40px;
+  }
+  .whoarewe h4,
+.whoareyou h4 {
+    margin: 20px 10px;
+    font-size: 20px;
+  }
+}
+h4 {
   margin-bottom: 10px;
   font-size: 20px;
 }
+
 @media screen and (max-width: 786px) {
-  .future #whoarewe {
+  #whoarewe {
     padding: 0;
   }
 }
 @media screen and (max-width: 380px) {
-  .future #whoarewe {
-    padding: 0 5px;
-    display: flex;
+  #whoarewe {
     flex-direction: column;
   }
 }
-
 .blog {
-  grid-area: c;
+  grid-area: f;
   background-color: rgba(110, 110, 110, 0.712);
   background-image: url(../img/production.jpg);
   background-size: cover;
@@ -478,11 +503,11 @@ svg .cls-3 {
 }
 
 .recycle {
-  grid-area: d;
+  grid-area: g;
 }
 
 .recycle-items {
-  grid-area: e;
+  grid-area: h;
   font-family: "Open Sans", sans-serif;
   display: grid;
   grid-template-columns: 13vw 13vw 13vw 13vw;
@@ -515,7 +540,7 @@ svg .cls-3 {
   }
 }
 .contact {
-  grid-area: f;
+  grid-area: i;
 }
 .contact h3 {
   line-height: 30px;
@@ -530,7 +555,7 @@ svg .cls-3 {
   }
 }
 .map {
-  grid-area: g;
+  grid-area: j;
   display: flex;
   justify-content: center;
 }
@@ -559,7 +584,7 @@ svg .cls-3 {
 }
 
 .form {
-  grid-area: h;
+  grid-area: k;
 }
 .form form {
   width: 35vw;
@@ -621,7 +646,7 @@ svg .cls-3 {
   }
 }
 footer {
-  grid-area: i;
+  grid-area: l;
   background-image: url(../img/background.jpeg);
   background-color: #849e43af;
   background-blend-mode: multiply;
@@ -649,18 +674,6 @@ footer h2 {
   font-family: "Jakarta Vise";
   font-weight: 100;
   margin-top: -40px;
-}
-
-.item9 {
-  grid-area: j;
-}
-
-.item10 {
-  grid-area: k;
-}
-
-.item11 {
-  grid-area: k;
 }
 
 .cls-1 {

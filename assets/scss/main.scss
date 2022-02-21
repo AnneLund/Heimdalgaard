@@ -44,13 +44,13 @@ body {
     "a a a a"
     "b b b b"
     "c c c c"
-    "d d d d"
-    "e e e e"
+    "d d e e"
     "f f f f"
-    "g g h h"
+    "g g g g"
+    "h h h h"
     "i i i i"
-    "j j j j"
-    "k k k k";
+    "j j k k"
+    "l l l l";
 
   grid-gap: 10px;
 
@@ -103,7 +103,8 @@ body {
       "h h"
       "i i"
       "j j"
-      "k k";
+      "k k"
+      "l l";
 
     article,
     section {
@@ -139,7 +140,8 @@ body {
       "h"
       "i"
       "j"
-      "k";
+      "k"
+      "l";
 
     article,
     section {
@@ -186,7 +188,7 @@ body {
 
 #burger-menu {
   position: fixed;
-  right: 0;
+  right: 0px;
   top: 0;
   cursor: pointer;
   margin: 50px 40px 20px 20px;
@@ -411,68 +413,93 @@ svg {
 
 .future {
   grid-area: b;
-  img {
-    width: 60%;
-    margin: 40px auto;
+  padding: 30px;
+}
+.img {
+  width: 80%;
+  grid-area: c;
+  margin: auto;
+}
+@media screen and (max-width: $mobile) {
+  .img {
+    width: 80%;
+    margin-top: -30px;
+  }
+}
+
+@media screen and (max-width: $tablet) {
+  .img {
+    width: 80%;
+    margin-top: -30px;
+  }
+}
+
+.whoarewe {
+  grid-area: d;
+  margin: 50px;
+
+  h4 {
+    font-size: 20px;
   }
 
-  @media screen and (max-width: $mobile) {
-    img {
-      width: 100%;
-      margin: 30px;
-    }
+  p {
+    font-size: 15px;
+  }
+}
+
+.whoareyou {
+  grid-area: e;
+  margin: 50px;
+  h4 {
+    font-size: 20px;
   }
 
-  #whoarewe {
-    display: flex;
-    justify-content: center;
+  p {
+    font-size: 15px;
+  }
+}
 
-    .text {
-      width: 30vw;
-      margin: 0 30px;
-      h4 {
-        font-size: 20px;
-      }
-
-      p {
-        font-size: 15px;
-      }
-    }
-
-    @media screen and (max-width: $mobile) {
-      .text {
-        width: 100%;
-        h4 {
-          font-size: 17px;
-        }
-        padding: 5px;
-      }
-    }
+@media screen and (max-width: $mobile) {
+  .whoarewe,
+  .whoareyou {
     h4 {
-      margin-bottom: 10px;
+      margin: 20px 10px;
       font-size: 20px;
     }
   }
+}
 
-  @media screen and (max-width: $tablet) {
-    #whoarewe {
-      padding: 0;
+@media screen and (max-width: $tablet) {
+  .whoarewe,
+  .whoareyou {
+    margin: 0 40px;
+    h4 {
+      margin: 20px 10px;
+      font-size: 20px;
     }
   }
+}
+h4 {
+  margin-bottom: 10px;
+  font-size: 20px;
+}
 
-  @media screen and (max-width: $mobile) {
-    #whoarewe {
-      padding: 0 5px;
-      display: flex;
-      flex-direction: column;
-    }
+@media screen and (max-width: $tablet) {
+  #whoarewe {
+    padding: 0;
+  }
+}
+
+@media screen and (max-width: $mobile) {
+  #whoarewe {
+    flex-direction: column;
   }
 }
 
 //BLOG
 
 .blog {
-  grid-area: c;
+  grid-area: f;
   background-color: rgba(110, 110, 110, 0.712);
   background-image: url(../img/production.jpg);
   background-size: cover;
@@ -549,11 +576,11 @@ svg {
 //BÆREDYGTIGHED OG OMTANKE
 
 .recycle {
-  grid-area: d;
+  grid-area: g;
 }
 
 .recycle-items {
-  grid-area: e;
+  grid-area: h;
   font-family: "Open Sans", sans-serif;
   display: grid;
   grid-template-columns: 13vw 13vw 13vw 13vw;
@@ -591,7 +618,7 @@ svg {
 }
 
 .contact {
-  grid-area: f;
+  grid-area: i;
   h3 {
     line-height: 30px;
     span {
@@ -609,7 +636,7 @@ svg {
 }
 
 .map {
-  grid-area: g;
+  grid-area: j;
   display: flex;
   justify-content: center;
   #map {
@@ -642,7 +669,7 @@ svg {
 
 // FORM
 .form {
-  grid-area: h;
+  grid-area: k;
 
   form {
     width: 35vw;
@@ -715,7 +742,7 @@ svg {
 
 //FOOTER
 footer {
-  grid-area: i;
+  grid-area: l;
   background-image: url(../img/background.jpeg);
   background-color: #849e43af;
   background-blend-mode: multiply;
@@ -745,15 +772,15 @@ footer {
     margin-top: -40px;
   }
 }
-.item9 {
-  grid-area: j;
-}
-.item10 {
-  grid-area: k;
-}
-.item11 {
-  grid-area: k;
-}
+// .item9 {
+//   grid-area: j;
+// }
+// .item10 {
+//   grid-area: k;
+// }
+// .item11 {
+//   grid-area: k;
+// }
 
 .cls-1 {
   fill: #dbc77a;
