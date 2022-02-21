@@ -12,6 +12,10 @@
       src="https://map.krak.dk/?c=56.219317,9.448673&z=14&q=%22mausingvej%2015%22;201070280;geo"
       async
     ></script>
+    <script
+      src="https://kit.fontawesome.com/4d3101f017.js"
+      crossorigin="anonymous"
+    ></script>
   </head>
   <body>
     <div class="grid-container">
@@ -2497,7 +2501,10 @@
           </svg>
           <figcaption>
             <h1>Heimdalgaard</h1>
-            <h2 id="words"><span id="word1">Økologisk</span><span id="word2">Lokalt</span><span id="word3">Bæredygtigt</span>
+            <h2 id="words">
+              <span id="word1">Økologisk</span><span id="word2">Lokalt</span
+              ><span id="word3">Bæredygtigt</span>
+            </h2>
           </figcaption>
         </figure>
 
@@ -2514,45 +2521,92 @@
           </ul>
         </div>
       </header>
-      <!-- ITEM2 -->
-      <article class="future">
+      <!-- FREMTIDENS BÆREDYGTIGE LANDBRUG -->
+      <section class="future">
+        <img class="basket-img" src="./assets/img/basket.JPG" />
         <header class="header">
           <h2>Fremtidens bæredygtige landbrug</h2>
           <h3>
             Mikrogrønt, krydderurter og salat - dyrket, høstet og pakket lokalt
           </h3>
         </header>
-        <figure>
-          <div>
-            <img src="./assets/img/products.jpg" alt="products" />
+
+        <!-- BILLEDE -->
+
+        <img src="./assets/img/products.jpg" alt="products" />
+
+        <!-- HVEM ER VI / HVEM ER DU -->
+        <article id="whoarewe">
+          <div class="text">
+            <h4>Hvem er vi</h4>
+            <p>
+              Heimdalgaard dyrker mikrogrønt, krydderurter og salat i små
+              moduler over hele landet. Det betyder at du får leveret samme dag
+              som det bliver høstet. Du kan få friske grøntsager leveret direkte
+              til dit køkken så ofte du ønsker. Ingen ordre er for lille eller
+              stor.
+            </p>
           </div>
-
-          <figcaption>
-            <div class="whoarewe">
-              <h4>Hvem er vi</h4>
-              <p>
-                Heimdalgaard dyrker mikrogrønt, krydderurter og salat i små
-                moduler over hele landet. Det betyder at du får leveret samme
-                dag som det bliver høstet. Du kan få friske grøntsager leveret
-                direkte til dit køkken så ofte du ønsker. Ingen ordre er for
-                lille eller stor.
-              </p>
+          <div class="text">
+            <h4>Hvem er du</h4>
+            <p>
+              Restaurant, hotel, spisested eller lignende. Du får mikrogrønt,
+              krydderurter og/eller salat på abonnement med muligheder for at
+              tilføje eller ændre dine bestillinger dag for dag.
+            </p>
+          </div>
+        </article>
+      </section>
+      <!-- BLOG -->
+      <section class="blog">
+        <header>
+          <h2>Vores sundheds blog</h2>
+          <h3>Læs om vores daglige arbejde på Heimdalgaard</h3>
+        </header>
+        <div class="cards">
+          <!-- BLOG CARD -->
+          <div class="card">
+            <h4>Dyrkning</h4>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia
+              maxime iste aut, temporibus iure repudiandae neque aliquam
+              voluptas vero? Nulla?
+            </p>
+            <div class="user">
+              <p><i class="fas fa-user-tag"></i>Lorem ipsum dolor sit amet.</p>
+              <p>06/03-2021</p>
             </div>
-
-            <div class="whoareyou">
-              <h4>Hvem er du</h4>
-              <p>
-                Restaurant, hotel, spisested eller lignende. Du får mikrogrønt,
-                krydderurter og/eller salat på abonnement med muligheder for at
-                tilføje eller ændre dine bestillinger dag for dag.
-              </p>
+          </div>
+          <div class="card">
+            <h4>Vanding</h4>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia
+              maxime iste aut, temporibus iure repudiandae neque aliquam
+              voluptas vero? Nulla?
+            </p>
+            <div class="user">
+              <p><i class="fas fa-user-tag"></i>Lorem ipsum dolor sit amet.</p>
+              <p>07/03-2021</p>
             </div>
-          </figcaption>
-        </figure>
-      </article>
+          </div>
+          <div class="card">
+            <h4>Høst</h4>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia
+              maxime iste aut, temporibus iure repudiandae neque aliquam
+              voluptas vero? Nulla?
+            </p>
+            <div class="user">
+              <p><i class="fas fa-user-tag"></i>Lorem ipsum dolor sit amet.</p>
+              <p>20/03-2021</p>
+            </div>
+          </div>
+        </div>
+      </section>
 
       <!-- BÆREDYGTIGHED OG OMTANKE -->
       <article class="recycle">
+        <img class="basket-img" src="./assets/img/basket.JPG" />
         <header class="header">
           <h2>Bæredygtighed og omtanke</h2>
           <h3>
@@ -2565,7 +2619,7 @@
       <!-- RECYCLE-ITEMS -->
       <article class="recycle-items">
         <figure>
-          <img src="./assets/img/seeds.jpeg" />
+          <img src="./assets/img/seeds.PNG" />
           <figcaption>
             <h4>Økologiske frø</h4>
             <p>
@@ -2576,7 +2630,7 @@
           </figcaption>
         </figure>
         <figure>
-          <img src="./assets/img/soil.jpeg" />
+          <img src="./assets/img/soil.JPG" />
           <figcaption>
             <h4>Økologisk jord</h4>
             <p>
@@ -2587,7 +2641,7 @@
           </figcaption>
         </figure>
         <figure>
-          <img src="./assets/img/soil.jpeg" />
+          <img src="./assets/img/recycle.PNG" />
           <figcaption>
             <h4>Genanvendelse</h4>
             <p>
@@ -2598,7 +2652,7 @@
           </figcaption>
         </figure>
         <figure>
-          <img src="./assets/img/soil.jpeg" />
+          <img src="./assets/img/local.PNG" />
           <figcaption>
             <h4>Lokalt</h4>
             <p>
