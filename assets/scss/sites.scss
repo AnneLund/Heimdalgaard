@@ -1,0 +1,329 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+@import url(/assets/css/media.css);
+
+@import url("https://fonts.googleapis.com/css2?family=Stalemate&display=swap");
+
+@import url("https://fonts.googleapis.com/css2?family=Julius+Sans+One&display=swap");
+
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400&display=swap");
+
+@font-face {
+  font-family: "Jakarta Vise";
+  src: url("/assets/fonts/Jakarta\ Vise.ttf");
+  src: local("☺"), url("../fonts/Jakarta\ Vise.ttf") format("ttf"),
+    url("../fonts/Jakarta\ Vise.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "JMH Typewriter";
+  src: url("/assets/fonts/JMH\ Typewriter.ttf");
+  src: local("☺"), url("../fonts/Jakarta\ Vise.ttf") format("ttf"),
+    url("../fonts/JMH\ Typewriter.ttf") format("truetype");
+}
+
+$mobile: 380px;
+$tablet: 786px;
+$desktop: 1024px;
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  max-width: 1630px;
+  margin: auto;
+}
+
+//GRID
+
+.grid-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-areas:
+    "a a a a"
+    "b c d e"
+    "f g g h"
+    "i i i i";
+
+  grid-gap: 10px;
+
+  img {
+    width: 100%;
+  }
+
+  article,
+  section,
+  footer,
+  header {
+    font-family: "Open Sans", sans-serif;
+    text-align: center;
+    font-size: 30px;
+    border: #696969b2 5px solid;
+
+    header {
+      h2 {
+        font-family: "JMH Typewriter";
+        margin: 45px 0;
+        font-size: 40px;
+      }
+
+      h3 {
+        font-family: "JMH Typewriter";
+        font-weight: 100;
+        margin-top: -25px;
+        margin-bottom: 20px;
+        font-size: 20px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: $tablet) {
+  .grid-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+      "a a"
+      "b b"
+      "c c"
+      "d d"
+      "e e"
+      "g g"
+      "f f"
+      "h h"
+      "i i";
+
+    article,
+    section {
+      h2 {
+        font-size: 5vw;
+      }
+      h3 {
+        font-size: 3vw;
+      }
+
+      h2 {
+        font-size: 5vw;
+      }
+      h3 {
+        font-size: 3vw;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: $mobile) {
+  .grid-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "a"
+      "b"
+      "c"
+      "d"
+      "e"
+      "g"
+      "f"
+      "h"
+      "i"
+      "j"
+      "k";
+
+    article,
+    section {
+      h2 {
+        font-size: 8vw;
+      }
+      h3 {
+        font-size: 7vw;
+      }
+
+      .header {
+        h2 {
+          font-size: 6vw;
+        }
+        h3 {
+          font-size: 4vw;
+        }
+      }
+    }
+  }
+}
+
+.main-header {
+  grid-area: a;
+  background-color: #849e43;
+  h1 {
+    font-family: "JMH Typewriter";
+    margin: 30px 0;
+    font-size: 4vw;
+  }
+  @media screen and (max-width: $tablet) {
+    h1 {
+      font-size: 7vw;
+    }
+  }
+  @media screen and (max-width: $mobile) {
+    h1 {
+      font-size: 6vw;
+    }
+  }
+}
+
+#burger-menu {
+  position: fixed;
+  right: 0;
+  top: 0;
+  cursor: pointer;
+  margin: 50px 40px 20px 20px;
+  height: 27px;
+  width: 27px;
+  overflow: visible;
+  z-index: 2;
+  background: none;
+  span {
+    background: rgb(0, 0, 0);
+    display: block;
+    height: 2px;
+    opacity: 1;
+    position: absolute;
+    z-index: 3;
+    transition: 0.3s ease-in-out;
+    width: 27px;
+    &:before {
+      background: rgb(0, 0, 0);
+      display: block;
+      height: 2px;
+      position: absolute;
+      transition: 0.3s ease-in-out;
+      content: "";
+      left: 0px;
+      top: -10px;
+      width: 27px;
+    }
+    &:after {
+      background: rgb(0, 0, 0);
+      display: block;
+      height: 2px;
+      position: absolute;
+      transition: 0.3s ease-in-out;
+      content: "";
+      left: 0px;
+      top: 10px;
+      width: 27px;
+    }
+  }
+}
+#burger-menu.close {
+  margin: 50px 40px 20px 20px;
+  span {
+    transform: rotate(-45deg);
+    width: 27px;
+    background: rgb(255, 255, 255);
+
+    &:before {
+      top: 0px;
+      transform: rotate(90deg);
+      width: 27px;
+      background: rgb(255, 255, 255);
+    }
+    &:after {
+      background: rgb(255, 255, 255);
+      top: 0px;
+      left: 0;
+      transform: rotate(90deg);
+      opacity: 0;
+      width: 0;
+    }
+  }
+}
+
+#menu {
+  z-index: 1;
+  min-width: 100%;
+  min-height: 100%;
+  position: fixed;
+  top: 0;
+  height: 0;
+  visibility: hidden;
+  opacity: 0;
+  text-align: center;
+  padding-top: 20px;
+  transition: all 0.3s ease-in-out;
+  li {
+    list-style: none;
+  }
+  a {
+    color: #fff;
+    display: block;
+    font-size: 32px;
+    margin-bottom: 30px;
+    text-decoration: none;
+  }
+}
+#menu.overlay {
+  visibility: visible;
+  opacity: 1;
+  padding-top: 100px;
+  background: rgba(0, 0, 0, 0.74);
+}
+
+.item2 {
+  grid-area: b;
+}
+.item3 {
+  grid-area: c;
+}
+.item4 {
+  grid-area: d;
+}
+.item5 {
+  grid-area: e;
+}
+.item6 {
+  grid-area: f;
+}
+.item7 {
+  grid-area: g;
+}
+.item8 {
+  grid-area: h;
+}
+
+//FOOTER
+footer {
+  grid-area: i;
+  background-image: url(../img/background.jpeg);
+  background-color: #849e43af;
+  background-blend-mode: multiply;
+  background-size: cover;
+  background-position: center;
+  padding: 20px 0;
+  #logo {
+    width: 200px;
+    margin-top: -20px;
+  }
+
+  .sm {
+    font-size: 15px;
+    margin: 5px;
+    i {
+      margin: 0 8px;
+      color: black;
+    }
+  }
+  p {
+    font-size: 10px;
+    margin-top: 20px;
+  }
+  h2 {
+    font-family: "Jakarta Vise";
+    font-weight: 100;
+    margin-top: -40px;
+  }
+}

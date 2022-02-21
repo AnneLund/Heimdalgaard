@@ -18,6 +18,10 @@
   src: url("/assets/fonts/JMH Typewriter.ttf");
   src: local("☺"), url("../fonts/Jakarta Vise.ttf") format("ttf"), url("../fonts/JMH Typewriter.ttf") format("truetype");
 }
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   max-width: 1630px;
   margin: auto;
@@ -115,8 +119,8 @@ body {
   grid-area: a;
   position: relative;
   background-image: url(../img/background.jpeg);
-  background-color: #e7e7e74b;
-  background-blend-mode: hue;
+  background-color: #849e4396;
+  background-blend-mode: multiply;
   background-size: cover;
   background-position: center;
   height: 60vh;
@@ -293,8 +297,8 @@ svg .cls-3 {
 }
 .logo figcaption #words #word1 {
   opacity: 0%;
-  -webkit-animation: slidein1 2s;
-          animation: slidein1 2s;
+  -webkit-animation: slidein1 3s;
+          animation: slidein1 3s;
   -webkit-animation-delay: 1s;
           animation-delay: 1s;
   -webkit-animation-fill-mode: forwards;
@@ -304,8 +308,8 @@ svg .cls-3 {
 }
 .logo figcaption #words #word2 {
   opacity: 0%;
-  -webkit-animation: slidein2 2s;
-          animation: slidein2 2s;
+  -webkit-animation: slidein2 3s;
+          animation: slidein2 3s;
   -webkit-animation-delay: 2s;
           animation-delay: 2s;
   -webkit-animation-fill-mode: forwards;
@@ -315,8 +319,8 @@ svg .cls-3 {
 }
 .logo figcaption #words #word3 {
   opacity: 0%;
-  -webkit-animation: slidein3 2s;
-          animation: slidein3 2s;
+  -webkit-animation: slidein3 3s;
+          animation: slidein3 3s;
   -webkit-animation-delay: 3s;
           animation-delay: 3s;
   -webkit-animation-fill-mode: forwards;
@@ -607,7 +611,11 @@ svg .cls-3 {
 }
 footer {
   grid-area: i;
-  background-color: #000000cb;
+  background-image: url(../img/background.jpeg);
+  background-color: #849e43af;
+  background-blend-mode: multiply;
+  background-size: cover;
+  background-position: center;
   padding: 20px 0;
 }
 footer #logo {
@@ -619,12 +627,11 @@ footer .sm {
   margin: 5px;
 }
 footer .sm i {
-  color: white;
   margin: 0 8px;
+  color: black;
 }
 footer p {
   font-size: 10px;
-  color: rgba(255, 255, 255, 0.678);
   margin-top: 20px;
 }
 footer h2 {

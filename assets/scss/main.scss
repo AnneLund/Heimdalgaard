@@ -28,6 +28,10 @@ $mobile: 380px;
 $tablet: 786px;
 $desktop: 1024px;
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   max-width: 1630px;
   margin: auto;
@@ -166,8 +170,8 @@ body {
   grid-area: a;
   position: relative;
   background-image: url(../img/background.jpeg);
-  background-color: #e7e7e74b;
-  background-blend-mode: hue;
+  background-color: #849e4396;
+  background-blend-mode: multiply;
   background-size: cover;
   background-position: center;
   height: 60vh;
@@ -349,7 +353,7 @@ svg {
 
       #word1 {
         opacity: 0%;
-        animation: slidein1 2s;
+        animation: slidein1 3s;
         animation-delay: 1s;
         animation-fill-mode: forwards;
         transform-box: fill-box;
@@ -357,7 +361,7 @@ svg {
       }
       #word2 {
         opacity: 0%;
-        animation: slidein2 2s;
+        animation: slidein2 3s;
         animation-delay: 2s;
         animation-fill-mode: forwards;
         transform-box: fill-box;
@@ -365,7 +369,7 @@ svg {
       }
       #word3 {
         opacity: 0%;
-        animation: slidein3 2s;
+        animation: slidein3 3s;
         animation-delay: 3s;
         animation-fill-mode: forwards;
         transform-box: fill-box;
@@ -700,7 +704,11 @@ svg {
 //FOOTER
 footer {
   grid-area: i;
-  background-color: #000000cb;
+  background-image: url(../img/background.jpeg);
+  background-color: #849e43af;
+  background-blend-mode: multiply;
+  background-size: cover;
+  background-position: center;
   padding: 20px 0;
   #logo {
     width: 200px;
@@ -711,13 +719,12 @@ footer {
     font-size: 15px;
     margin: 5px;
     i {
-      color: white;
       margin: 0 8px;
+      color: black;
     }
   }
   p {
     font-size: 10px;
-    color: rgba(255, 255, 255, 0.678);
     margin-top: 20px;
   }
   h2 {
