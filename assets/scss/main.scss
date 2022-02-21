@@ -44,7 +44,8 @@ body {
     "e e e e"
     "f f f f"
     "g g h h"
-    "i i j j"
+    "i i i i"
+    "j j j j"
     "k k k k";
 
   grid-gap: 10px;
@@ -54,7 +55,8 @@ body {
   }
 
   article,
-  section {
+  section,
+  footer {
     font-family: "Open Sans", sans-serif;
     text-align: center;
     font-size: 30px;
@@ -473,6 +475,7 @@ svg {
   background-blend-mode: hue;
   background-position: top;
   margin-top: 40px;
+  padding: 30px 0;
   header {
     color: rgb(255, 255, 255);
   }
@@ -498,7 +501,7 @@ svg {
   .card {
     position: relative;
     background-color: #ffffffb7;
-    padding: 10px;
+    padding: 30px;
     margin: 0 50px;
 
     h4 {
@@ -694,8 +697,22 @@ svg {
   }
 }
 
-.item8 {
+//FOOTER
+footer {
   grid-area: i;
+  background-color: #000000cb;
+  padding: 20px 0;
+  #logo {
+    width: 200px;
+    margin-top: -20px;
+  }
+  p {
+    font-size: 10px;
+  }
+  h2 {
+    font-family: "Jakarta Vise";
+    margin-top: -40px;
+  }
 }
 .item9 {
   grid-area: j;

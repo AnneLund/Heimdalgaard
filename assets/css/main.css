@@ -26,32 +26,36 @@ body {
 .grid-container {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
-  grid-template-areas: "a a a a" "b b b b" "c c c c" "d d d d" "e e e e" "f f f f" "g g h h" "i i j j" "k k k k";
+  grid-template-areas: "a a a a" "b b b b" "c c c c" "d d d d" "e e e e" "f f f f" "g g h h" "i i i i" "j j j j" "k k k k";
   grid-gap: 10px;
 }
 .grid-container img {
   width: 100%;
 }
 .grid-container article,
-.grid-container section {
+.grid-container section,
+.grid-container footer {
   font-family: "Open Sans", sans-serif;
   text-align: center;
   font-size: 30px;
 }
 .grid-container article .basket-img,
-.grid-container section .basket-img {
+.grid-container section .basket-img,
+.grid-container footer .basket-img {
   width: 150px;
   margin-bottom: -40px;
   margin-top: 25px;
 }
 .grid-container article header h2,
-.grid-container section header h2 {
+.grid-container section header h2,
+.grid-container footer header h2 {
   font-family: "JMH Typewriter";
   margin: 45px 0;
   font-size: 40px;
 }
 .grid-container article header h3,
-.grid-container section header h3 {
+.grid-container section header h3,
+.grid-container footer header h3 {
   font-family: "JMH Typewriter";
   font-weight: 100;
   margin-top: -25px;
@@ -407,6 +411,7 @@ svg .cls-3 {
   background-blend-mode: hue;
   background-position: top;
   margin-top: 40px;
+  padding: 30px 0;
 }
 .blog header {
   color: white;
@@ -432,7 +437,7 @@ svg .cls-3 {
 .blog .card {
   position: relative;
   background-color: #ffffffb7;
-  padding: 10px;
+  padding: 30px;
   margin: 0 50px;
 }
 .blog .card h4 {
@@ -600,8 +605,21 @@ svg .cls-3 {
     width: 100%;
   }
 }
-.item8 {
+footer {
   grid-area: i;
+  background-color: #000000cb;
+  padding: 20px 0;
+}
+footer #logo {
+  width: 200px;
+  margin-top: -20px;
+}
+footer p {
+  font-size: 10px;
+}
+footer h2 {
+  font-family: "Jakarta Vise";
+  margin-top: -40px;
 }
 
 .item9 {
