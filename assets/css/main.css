@@ -66,6 +66,11 @@ body {
   margin-bottom: 20px;
   font-size: 20px;
 }
+.grid-container article h4,
+.grid-container section h4,
+.grid-container footer h4 {
+  font-family: "JMH Typewriter";
+}
 
 @media screen and (max-width: 786px) {
   .grid-container {
