@@ -2692,49 +2692,17 @@
 
       <!-- FORMULAR -->
       <section class="form">
-        <!-- <form id="contact-form">
-          <header>
-            <h2>SEND EN BESKED</h2>
-          </header>
-
-          <div>
-            <input
-              type="text"
-              name="name"
-              id="name"
-              placeholder="Fulde navn:"
-            />
-          </div>
-
-          <div>
-            <input type="email" name="email" id="email" placeholder="Email:" />
-          </div>
-
-          <div class="sendnumber">
-            <input
-              type="number"
-              name="number"
-              id="number"
-              placeholder="Telefonnummer:"
-            />
-          </div>
-
-          <div>
-            <textarea id="message" placeholder="Besked:"></textarea>
-          </div>
-
-          <input type="submit" value="send" id="send">Send besked</input>
-        </form> -->
-
+        <header>
+          <h2>SEND EN BESKED</h2>
+        </header>
         <form id="contact-form">
-          <!-- <input id="number" type="hidden" name="contact_number" /> -->
-          <label>Name</label>
+          <label>Navn</label>
           <input id="name" type="text" name="user_name" />
           <label>Email</label>
-          <input id="email" type="email" name="user_email" />
-          <label>Message</label>
-          <textarea id="message" name="message"></textarea>
-          <input id="send" type="submit" value="Send" />
+          <input type="email" name="user_email" />
+          <label>Besked</label>
+          <textarea name="message"></textarea>
+          <input type="submit" value="Send" />
         </form>
       </section>
       <!-- ITEM8 -->
@@ -2789,76 +2757,20 @@
           .getElementById("contact-form")
           .addEventListener("submit", function (event) {
             event.preventDefault();
-            validate();
+            // generate a five digit number for the contact_number variable
+            // this.contact_number.value = (Math.random() * 100000) | 0;
+            // these IDs from the previous steps
+            emailjs.sendForm("service_pszj1z9", "template_ki6g68e", this).then(
+              function () {
+                console.log("SUCCESS!");
+                alert("Din besked blev sendt!");
+              },
+              function (error) {
+                console.log("FAILED...", error);
+              }
+            );
           });
       };
-      //Hvis inputtet "Fulde navn" er tomt, skal brugeren informeres om dette med en alert. Feltet skal markeres, så brugeren ved, hvor informationen mangler (name.focus)
-
-      function validate() {
-        // if (name.value === "") {
-        //   alert("Udfyld feltet fulde navn!");
-        //   name.focus();
-        //   return false;
-        // }
-
-        //Email-validering: Hvis inputtet "email" ikke er udfyldt, skal brugeren have en alert,
-        const email = document.getElementById("email");
-        if (!email.value) {
-          alert("Udfyld emailadresse!");
-          email.focus();
-          return false;
-        } else {
-          //Hvis brugerens indtastning af email ikke lever op til det pattern der er beskrevet i den tilhørende funktion, skal brugeren have en alert.
-          if (!isValidEmail(email.value)) {
-            alert("Indtast korrekt emailadresse");
-            email.focus();
-            return false;
-          }
-        }
-
-        checkNumber();
-
-        //Hvis brugeren ikke har angivet sit nummer, skal denne have en alert.
-        function checkNumber() {
-          const number = document.getElementById("number");
-          return false;
-        }
-
-        const message = document.getElementById("message");
-        if (message.value === "") {
-          alert("Skriv din besked i tekstfeltet");
-          message.focus();
-          return false;
-        }
-
-        //Funktion der checker, at brugeren har indtastet et 8-cifret nummer.
-        function isValidNumber(value) {
-          let pattern = /^\d{8}$/;
-          return pattern.test(value);
-        }
-
-        //Funktion der checker at emailen indeholder de nødvendige tegn.
-        function isValidEmail(value) {
-          let pattern =
-            /^([\w-]+(?:\.[\w-]+)*)@((?:[\w-]+\.)*\w[\w-]{0,66})\.([a-z]{2,6}(?:\.[a-z]{2})?)$/i;
-          return pattern.test(value);
-        }
-
-        // generate a five digit number for the contact_number variable
-        // this.contact_number.value = (Math.random() * 100000) | 0;
-        // these IDs from the previous steps
-        emailjs.sendForm("service_pszj1z9", "template_ki6g68e", this).then(
-          function () {
-            console.log("SUCCESS!");
-          },
-          function (error) {
-            console.log("FAILED...", error);
-          }
-        );
-
-        //Brugeren får også en alert, der fortæller at formularen er afsendt, hvis der ikke er krydset af i checkboxen.
-        alert("Formularen blev sendt!");
-      }
     </script>
   </body>
 </html>

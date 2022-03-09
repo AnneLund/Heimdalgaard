@@ -9,14 +9,16 @@ burgerMenu.addEventListener("click", function () {
 });
 
 
+
+
  
 //  //Hvis inputtet "Fulde navn" er tomt, skal brugeren informeres om dette med en alert. Feltet skal markeres, så brugeren ved, hvor informationen mangler (name.focus)
  
-//    const name = document.getElementById("name");
-//    if (name.value === "") {
-//      alert("Udfyld feltet fulde navn!");
-//      name.focus();
-//    }
+  //  const name = document.getElementById("name");
+  //  if (name.value === "") {
+  //    alert("Udfyld feltet fulde navn!");
+  //    name.focus();
+  //  }
 
  
  
