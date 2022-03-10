@@ -628,32 +628,32 @@ h4 {
     height: 55vh;
   }
 }
-footer {
+.main-footer {
   grid-area: l;
-  background-image: url(../img/background.jpeg);
-  background-color: #849e43af;
+  background-image: url(../img/background.jpg);
+  background-color: #849e43e5;
   background-blend-mode: multiply;
   background-size: cover;
   background-position: center;
   padding: 20px 0;
 }
-footer #logo {
+.main-footer #logo {
   width: 200px;
   margin-top: -20px;
 }
-footer .sm {
+.main-footer .sm {
   font-size: 15px;
   margin: 5px;
 }
-footer .sm i {
+.main-footer .sm i {
   margin: 0 8px;
   color: black;
 }
-footer p {
+.main-footer p {
   font-size: 10px;
   margin-top: 20px;
 }
-footer h2 {
+.main-footer h2 {
   font-family: "Jakarta Vise";
   font-weight: 100;
   margin-top: -40px;
